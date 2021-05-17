@@ -1,7 +1,8 @@
-import {colorNoise, bwNoise} from './tools/noise.js';
 import {setupHighDpiCanvas} from "./util/setup.js";
-import {bwGradient,rgbGradient} from './tools/gradient.js';
 import {clearCanvas} from "./util/clear.js";
+import {bwGradient,rgbGradient} from './tools/gradient.js';
+import {colorNoise, bwNoise} from './tools/noise.js';
+import {dotsWhite,dotsBlack} from "./tools/pattern.js";
 
 //Screen size calculation
 let screenHeight = window.innerHeight;
