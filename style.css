@@ -14,11 +14,11 @@
 .toolBoxEntry {
     background-color: transparent;
     border: none;
-    padding: 50px 32px;
+    padding: 50px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 15pt;
+    font-size: 1.5vw;
 }
 
 #draw_zone {
