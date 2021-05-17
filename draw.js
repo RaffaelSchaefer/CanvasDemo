@@ -1,15 +1,14 @@
 import {colorNoise, bwNoise} from './noise.js';
 import {setupHighDpiCanvas} from "./setup.js";
 import {bwGradient} from './gradient.js';
-
 //Screen size calculation
 let screenHeight = window.innerHeight;
 let screenWidth = window.innerWidth;
 //Canvas implementation
 let canvasContext = setupHighDpiCanvas(document.getElementById("draw_zone"));
-//Draw
-colorNoise(canvasContext, screenWidth, screenHeight, 4);
-//Event Listeners
-document.getElementById("bwNoise").addEventListener('click',bwNoise(canvasContext, screenWidth, screenHeight, 4));
-document.getElementById("bwGradient").addEventListener('click',bwGradient(canvasContext, screenWidth,screenHeight, 4));
-document.getElementById("coloredNoise").addEventListener('click',colorNoise(canvasContext,screenWidth,screenHeight,4));
+//Event Handler
+window.onload = function () {
+    document.getElementById('coloredNoise').addEventListener('click', function () {colorNoise(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value)});
+    document.getElementById('bwNoise').addEventListener('click', function () {bwNoise(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value)});
+    document.getElementById('bwGradient').addEventListener('click', function () {bwGradient(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value)});
+}
