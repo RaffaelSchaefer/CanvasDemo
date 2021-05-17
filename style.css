@@ -7,7 +7,7 @@
 }
 
 ::placeholder {
-    color: darkgray;
+    color: black;
     opacity: 1;
 }
 
@@ -19,7 +19,6 @@
     text-decoration: none;
     display: inline-block;
     font-size: 25px;
-    color: darkgray;
 }
 
 #draw_zone {
