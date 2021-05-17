@@ -3,6 +3,8 @@
 * {
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    position: fixed;
     font-family: 'Roboto Mono', monospace;
 }
 
