@@ -1,6 +1,8 @@
 import {colorNoise, bwNoise} from './tools/noise.js';
 import {setupHighDpiCanvas} from "./util/setup.js";
 import {bwGradient,rgbGradient} from './tools/gradient.js';
+import {clearCanvas} from "./util/clear.js";
+
 //Screen size calculation
 let screenHeight = window.innerHeight;
 let screenWidth = window.innerWidth;
@@ -12,4 +14,5 @@ window.onload = function () {
     document.getElementById('bwNoise').addEventListener('click', function () {bwNoise(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value)});
     document.getElementById('bwGradient').addEventListener('click', function () {bwGradient(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value)});
     document.getElementById('rgbGradient').addEventListener('click', function () {rgbGradient(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value)});
+    document.getElementById('clear').addEventListener('click', function () {clearCanvas(canvasContext)});
 }
