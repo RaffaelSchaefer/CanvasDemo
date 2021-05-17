@@ -13,7 +13,7 @@ export function colorGradient (ctx, width, height) {
         for (let y = 0; y <= height; y++) {
             let rValue = x%256;
             let gValue = y%256;
-            let bValue = 0;
+            let bValue = Math.abs((x-y)%256);
             ctx.fillStyle = "rgb("+rValue+","+gValue+","+bValue+")";
             ctx.fillRect(x,y,1,1);
         }

@@ -7,5 +7,4 @@ let screenWidth = window.innerWidth;
 //Canvas implementation
 let canvasContext = setupHighDpiCanvas(document.getElementById("draw_zone"));
 //Draw
-canvasContext.imageSmoothingEnabled = false;
-colorNoise(canvasContext, screenWidth, screenHeight);
+colorGradient(canvasContext, screenWidth, screenHeight);
