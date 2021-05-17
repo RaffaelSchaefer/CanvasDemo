@@ -8,4 +8,4 @@ let canvas = document.getElementById("draw_zone");
 let canvasContext = canvas.getContext("2d");
 //Draw
 canvasContext.imageSmoothingEnabled = false;
-colorGradient(canvasContext, screenWidth, screenHeight);
+colorNoise(canvasContext, screenWidth, screenHeight);
