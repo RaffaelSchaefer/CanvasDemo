@@ -21,3 +21,7 @@ window.onload = function () {
     document.getElementById('clear').addEventListener('click', function () {clearCanvas(canvasContext)});
     document.getElementById('export').addEventListener('click', function () {exportCanvas(document.getElementById('draw_zone'))});
 }
+//Resize reload
+window.addEventListener('resize', function () {
+    window.location.reload();
+});
