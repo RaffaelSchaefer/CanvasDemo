@@ -1,9 +1,10 @@
 import {setupHighDpiCanvas} from "./util/setup.js";
 import {clearCanvas} from "./util/clear.js";
+import {exportCanvas} from "./util/export.js";
 import {bwGradient,rgbGradient} from './tools/gradient.js';
 import {colorNoise, bwNoise} from './tools/noise.js';
 import {dotsWhite,dotsBlack} from "./tools/pattern.js";
-import {exportCanvas} from "./util/export.js";
+import {rgbParticle} from "./tools/misc.js";
 
 //Screen size calculation
 let screenHeight = window.innerHeight;
@@ -18,6 +19,7 @@ window.onload = function () {
     document.getElementById('rgbGradient').addEventListener('click', function () {rgbGradient(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value,document.getElementById('opacity').value)});
     document.getElementById('dotsBlack').addEventListener('click', function () {dotsBlack(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value,document.getElementById('opacity').value,document.getElementById('translateX').value,document.getElementById('translateY').value)});
     document.getElementById('dotsWhite').addEventListener('click', function () {dotsWhite(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value,document.getElementById('opacity').value,document.getElementById('translateX').value,document.getElementById('translateY').value)});
+    document.getElementById('rgbParticle').addEventListener('click',function () {rgbParticle(canvasContext,screenWidth,screenHeight)});
     document.getElementById('clear').addEventListener('click', function () {clearCanvas(canvasContext)});
     document.getElementById('export').addEventListener('click', function () {exportCanvas(document.getElementById('draw_zone'))});
 }
