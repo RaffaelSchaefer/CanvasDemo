@@ -1,4 +1,4 @@
-export function colorNoise (ctx, width, height, resolution,alpha) {
+export function colorNoise (ctx, width, height, resolution, alpha) {
     for (let x = 0; x <= width/resolution; x++) {
         for (let y = 0; y <= height/resolution; y++) {
             ctx.fillStyle = "rgb("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+alpha+")";
@@ -7,7 +7,7 @@ export function colorNoise (ctx, width, height, resolution,alpha) {
     }
 }
 
-export function bwNoise (ctx, width, height, resolution,alpha) {
+export function bwNoise (ctx, width, height, resolution, alpha) {
     for (let x = 0; x <= width/resolution; x++) {
         for (let y = 0; y <= height/resolution; y++) {
             let randomColor = Math.floor(Math.random()*255);

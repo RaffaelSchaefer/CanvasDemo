@@ -1,21 +1,21 @@
-export function bwGradient (ctx, width, height, resolution,alpha) {
+export function bwGradient (ctx, width, height, resolution, alpha, posX, posY) {
     for (let x = 0; x <= width/resolution; x++) {
         for (let y = 0; y <= height/resolution; y++) {
             let bwValue = y*resolution%256;
             ctx.fillStyle = "rgba("+bwValue+","+bwValue+","+bwValue+","+alpha+")";
-            ctx.fillRect(x*resolution,y*resolution,resolution,resolution);
+            ctx.fillRect(x*resolution+posX,y*resolution+posY,resolution,resolution);
         }
     }
 }
 
-export function rgbGradient (ctx, width, height, resolution,alpha) {
+export function rgbGradient (ctx, width, height, resolution, alpha, posX, posY) {
     for (let x = 0; x <= width/resolution; x++) {
         for (let y = 0; y <= height/resolution; y++) {
             let rValue = x*resolution%256;
             let bValue = y*resolution%256;
             let gValue = 0;
             ctx.fillStyle = "rgb("+rValue+","+gValue+","+bValue+","+alpha+")";
-            ctx.fillRect(x*resolution,y*resolution,resolution,resolution);
+            ctx.fillRect(x*resolution+posX,y*resolution+posY,resolution,resolution);
         }
     }
 }
