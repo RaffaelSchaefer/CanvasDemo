@@ -19,7 +19,7 @@ window.onload = function () {
     document.getElementById('rgbGradient').addEventListener('click', function () {rgbGradient(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value,document.getElementById('opacity').value)});
     document.getElementById('dotsBlack').addEventListener('click', function () {dotsBlack(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value,document.getElementById('opacity').value,document.getElementById('translateX').value,document.getElementById('translateY').value)});
     document.getElementById('dotsWhite').addEventListener('click', function () {dotsWhite(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value,document.getElementById('opacity').value,document.getElementById('translateX').value,document.getElementById('translateY').value)});
-    document.getElementById('rgbParticle').addEventListener('click',function () {rgbParticle(canvasContext,screenWidth,screenHeight)});
+    document.getElementById('rgbParticle').addEventListener('click',function () {rgbParticle(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value)});
     document.getElementById('clear').addEventListener('click', function () {clearCanvas(canvasContext)});
     document.getElementById('export').addEventListener('click', function () {exportCanvas(document.getElementById('draw_zone'))});
 }
