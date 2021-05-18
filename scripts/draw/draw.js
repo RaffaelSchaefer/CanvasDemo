@@ -12,12 +12,16 @@ let screenWidth = window.innerWidth;
 let canvasContext = setupHighDpiCanvas(document.getElementById("draw_zone"));
 //Event Handler
 window.onload = function () {
-    document.getElementById('coloredNoise').addEventListener('click', function () {colorNoise(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value,document.getElementById('opacity').value)});
-    document.getElementById('bwNoise').addEventListener('click', function () {bwNoise(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value,document.getElementById('opacity').value)});
-    document.getElementById('bwGradient').addEventListener('click', function () {bwGradient(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value,document.getElementById('opacity').value,0,0)});
-    document.getElementById('rgbGradient').addEventListener('click', function () {rgbGradient(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value,document.getElementById('opacity').value,0,0)});
-    document.getElementById('dotsBlack').addEventListener('click', function () {dotsBlack(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value,document.getElementById('opacity').value,0,0)});
-    document.getElementById('dotsWhite').addEventListener('click', function () {dotsWhite(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value,document.getElementById('opacity').value,0,0)});
+    let res = document.getElementById('resolution').value;
+    let alpha = document.getElementById('opacity').value;
+    let positionX = document.getElementById('translateX').value;
+    let positionY = document.getElementById('translateY').value;
+    document.getElementById('coloredNoise').addEventListener('click', function () {colorNoise(canvasContext,screenWidth,screenHeight,res,alpha)});
+    document.getElementById('bwNoise').addEventListener('click', function () {bwNoise(canvasContext,screenWidth,screenHeight,res,alpha)});
+    document.getElementById('bwGradient').addEventListener('click', function () {bwGradient(canvasContext,screenWidth,screenHeight,res,alpha)});
+    document.getElementById('rgbGradient').addEventListener('click', function () {rgbGradient(canvasContext,screenWidth,screenHeight,res,alpha)});
+    document.getElementById('dotsBlack').addEventListener('click', function () {dotsBlack(canvasContext,screenWidth,screenHeight,res,alpha,positionX,positionY)});
+    document.getElementById('dotsWhite').addEventListener('click', function () {dotsWhite(canvasContext,screenWidth,screenHeight,res,alpha,positionX,positionY)});
     document.getElementById('clear').addEventListener('click', function () {clearCanvas(canvasContext)});
     document.getElementById('export').addEventListener('click', function () {exportCanvas(document.getElementById('draw_zone'))});
 }
