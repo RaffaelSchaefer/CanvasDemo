@@ -7,32 +7,39 @@
     <link rel="icon" href="img/logo/logo_black.png">
 </head>
 <body>
-    <div id="toolBox">
-        <div id="toolBoxHeader">
-            <div id="toolBoxHeaderClose"></div>
-            <p id="toolBoxHeaderText">Tools</p>
+    <div id="toolBox" class="menu">
+        <div id="toolBoxHeader" class="menuHeader">
+            <div id="toolBoxHeaderClose" class="menuClose"></div>
+            <p class="menuTitle">Tools</p>
         </div>
-        <div id="toolBoxContent">
-            <label for="resolution" class="toolBoxEntry">Resolution</label><input type="text" placeholder="size" class="toolBoxEntry" id="resolution" value="4">
+        <div id="toolBoxContent" class="menuContent">
+            <button class="menuEntry" id="coloredNoise">Colored Noise</button>
+            <button class="menuEntry" id="bwNoise">BW Noise</button>
+            <button class="menuEntry" id="bwGradient">BW Gradient</button>
             <br>
-            <label for="opacity" class="toolBoxEntry">Opacity</label><input type="text" placeholder="alpha" class="toolBoxEntry" id="opacity" value="1">
+            <button class="menuEntry" id="rgbGradient">RGB Gradient</button>
+            <button class="menuEntry" id="dotsWhite">White Dots</button>
+            <button class="menuEntry" id="dotsBlack">Black Dots</button>
             <br>
-            <label for="translateX" class="toolBoxEntry">X position</label><input type="text" placeholder="X" class="toolBoxEntry" id="translateX" value="0">
+            <button class="menuEntry" id="rgbParticle">RGB Particle</button>
             <br>
-            <label for="translateY" class="toolBoxEntry">Y position</label><input type="text" placeholder="Y" class="toolBoxEntry" id="translateY" value="0">
+            <button class="menuEntry" id="clear">Clear</button>
+            <button class="menuEntry" id="export">Export</button>
+        </div>
+    </div>
+    <div id="optionsMenu" class="menu">
+        <div id="optionsMenuHeader" class="menuHeader">
+            <div id="optionsMenuClose" class="menuClose"></div>
+            <p class="menuTitle">Options</p>
+        </div>
+        <div id="optionsMenuContent" class="menuContent">
+            <label for="resolution" class="menuEntry">Resolution</label><input type="text" placeholder="size" class="menuEntry" id="resolution" value="4">
             <br>
-            <button class="toolBoxEntry" id="coloredNoise">Colored Noise</button>
-            <button class="toolBoxEntry" id="bwNoise">BW Noise</button>
-            <button class="toolBoxEntry" id="bwGradient">BW Gradient</button>
+            <label for="opacity" class="menuEntry">Opacity</label><input type="text" placeholder="alpha" class="menuEntry" id="opacity" value="1">
             <br>
-            <button class="toolBoxEntry" id="rgbGradient">RGB Gradient</button>
-            <button class="toolBoxEntry" id="dotsWhite">White Dots</button>
-            <button class="toolBoxEntry" id="dotsBlack">Black Dots</button>
+            <label for="translateX" class="menuEntry">X position</label><input type="text" placeholder="X" class="menuEntry" id="translateX" value="0">
             <br>
-            <button class="toolBoxEntry" id="rgbParticle">RGB Particle</button>
-            <br>
-            <button class="toolBoxEntry" id="clear">Clear</button>
-            <button class="toolBoxEntry" id="export">Export</button>
+            <label for="translateY" class="menuEntry">Y position</label><input type="text" placeholder="Y" class="menuEntry" id="translateY" value="0">
         </div>
     </div>
     <canvas id="draw_zone"></canvas>
