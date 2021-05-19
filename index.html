@@ -12,24 +12,26 @@
             <div id="toolBoxHeaderClose"></div>
             <p id="toolBoxHeaderText">Tools</p>
         </div>
-        <label for="resolution" class="toolBoxEntry">Resolution</label><input type="text" placeholder="size" class="toolBoxEntry" id="resolution" value="4">
-        <br>
-        <label for="opacity" class="toolBoxEntry">Opacity</label><input type="text" placeholder="alpha" class="toolBoxEntry" id="opacity" value="1">
-        <br>
-        <label for="translateX" class="toolBoxEntry">X position</label><input type="text" placeholder="X" class="toolBoxEntry" id="translateX" value="0">
-        <br>
-        <label for="translateY" class="toolBoxEntry">Y position</label><input type="text" placeholder="Y" class="toolBoxEntry" id="translateY" value="0">
-        <br>
-        <button class="toolBoxEntry" id="coloredNoise">Colored Noise</button>
-        <button class="toolBoxEntry" id="bwNoise">BW Noise</button>
-        <button class="toolBoxEntry" id="bwGradient">BW Gradient</button>
-        <button class="toolBoxEntry" id="rgbGradient">RGB Gradient</button>
-        <button class="toolBoxEntry" id="dotsWhite">White Dots</button>
-        <button class="toolBoxEntry" id="dotsBlack">Black Dots</button>
-        <button class="toolBoxEntry" id="rgbParticle">RGB Particle</button>
-        <br>
-        <button class="toolBoxEntry" id="clear">Clear</button>
-        <button class="toolBoxEntry" id="export">Export</button>
+        <div id="toolBoxContent">
+            <label for="resolution" class="toolBoxEntry">Resolution</label><input type="text" placeholder="size" class="toolBoxEntry" id="resolution" value="4">
+            <br>
+            <label for="opacity" class="toolBoxEntry">Opacity</label><input type="text" placeholder="alpha" class="toolBoxEntry" id="opacity" value="1">
+            <br>
+            <label for="translateX" class="toolBoxEntry">X position</label><input type="text" placeholder="X" class="toolBoxEntry" id="translateX" value="0">
+            <br>
+            <label for="translateY" class="toolBoxEntry">Y position</label><input type="text" placeholder="Y" class="toolBoxEntry" id="translateY" value="0">
+            <br>
+            <button class="toolBoxEntry" id="coloredNoise">Colored Noise</button>
+            <button class="toolBoxEntry" id="bwNoise">BW Noise</button>
+            <button class="toolBoxEntry" id="bwGradient">BW Gradient</button>
+            <button class="toolBoxEntry" id="rgbGradient">RGB Gradient</button>
+            <button class="toolBoxEntry" id="dotsWhite">White Dots</button>
+            <button class="toolBoxEntry" id="dotsBlack">Black Dots</button>
+            <button class="toolBoxEntry" id="rgbParticle">RGB Particle</button>
+            <br>
+            <button class="toolBoxEntry" id="clear">Clear</button>
+            <button class="toolBoxEntry" id="export">Export</button>
+        </div>
     </div>
     <canvas id="draw_zone"></canvas>
     <script type="module" src="scripts/ui/ui.js"></script>
