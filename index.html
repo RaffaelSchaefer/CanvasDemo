@@ -8,6 +8,10 @@
 </head>
 <body>
     <div id="toolBox">
+        <div id="toolBoxHeader">
+            <div id="toolBoxHeaderClose"></div>
+            <p id="toolBoxHeaderText">Tools</p>
+        </div>
         <label for="resolution" class="toolBoxEntry">Resolution</label><input type="text" placeholder="size" class="toolBoxEntry" id="resolution" value="4">
         <br>
         <label for="opacity" class="toolBoxEntry">Opacity</label><input type="text" placeholder="alpha" class="toolBoxEntry" id="opacity" value="1">
@@ -28,6 +32,7 @@
         <button class="toolBoxEntry" id="export">Export</button>
     </div>
     <canvas id="draw_zone"></canvas>
+    <script type="module" src="scripts/ui/ui.js"></script>
     <script type="module" src="scripts/draw/draw.js"></script>
 </body>
 </html>
