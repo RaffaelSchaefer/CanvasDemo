@@ -5,7 +5,9 @@ import {bwGradient,rgbGradient} from './tools/gradient.js';
 import {colorNoise, bwNoise} from './tools/noise.js';
 import {dotsWhite,dotsBlack} from "./tools/pattern.js";
 import {rgbParticle} from "./tools/misc.js";
-
+import {brushMoveHandler,} from "./brush/brush.js";
+//Brush let
+let brushMode = false;
 //Screen size calculation
 let screenHeight = window.innerHeight;
 let screenWidth = window.innerWidth;
@@ -22,7 +24,12 @@ window.onload = function () {
     document.getElementById('rgbParticle').addEventListener('click',function () {rgbParticle(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value)});
     document.getElementById('clear').addEventListener('click', function () {clearCanvas(canvasContext)});
     document.getElementById('export').addEventListener('click', function () {exportCanvas(document.getElementById('draw_zone'))});
+    document.getElementById('useBrush').addEventListener('click', function () {brushMode = brushMode === false;});
 }
+//Brush
+document.getElementById('draw_zone').addEventListener('mousemove',function (event) {
+    brushMoveHandler(event,canvasContext, document.getElementById('resolution').value,brushMode);
+});
 //Resize reload
 window.addEventListener('resize', function () {
     window.location.reload();
