@@ -31,7 +31,7 @@ window.onload = function () {
         dots(canvasContext,screenWidth,screenHeight,document.getElementById('resolution').value,document.getElementById('opacity').value,document.getElementById('colorRValue').value,document.getElementById('colorGValue').value,document.getElementById('colorBValue').value)
     });
     document.getElementById('fill').addEventListener('click',function () {
-        fillCanvas(canvasContext,document.getElementById('colorRValue').value,document.getElementById('colorGValue').value,document.getElementById('colorBValue').value)
+        fillCanvas(canvasContext,document.getElementById('colorRValue').value,document.getElementById('colorGValue').value,document.getElementById('colorBValue').value,document.getElementById('opacity').value)
     });
     document.getElementById('clear').addEventListener('click', function () {
         clearCanvas(canvasContext)
