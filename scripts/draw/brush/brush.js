@@ -1,8 +1,8 @@
-export function drawLineOnCanvas(event, ctx, size, opacity) {
+export function drawLineOnCanvas(event, ctx, size, opacity, r, g, b) {
     let posX = event.offsetX, posY = event.offsetY;
 
     ctx.lineWidth = size;
-    ctx.strokeStyle = "rgba(0,0,0,"+opacity+")";
+    ctx.strokeStyle = "rgba("+r+","+g+","+b+","+opacity+")";
 
     ctx.beginPath()
     ctx.moveTo(posX - event.movementX, posY - event.movementY);
@@ -11,9 +11,9 @@ export function drawLineOnCanvas(event, ctx, size, opacity) {
     ctx.stroke();
 }
 
-export function brushMoveHandler(event, ctx, size, opacity, brushMode) {
+export function brushMoveHandler(event, ctx, size, opacity, brushMode, r, g, b) {
     if (event.buttons === 1 && brushMode) {
-        drawLineOnCanvas(event, ctx, size, opacity);
+        drawLineOnCanvas(event, ctx, size, opacity, r, g, b);
     } else {
         ctx.lineWidth = 1;
     }

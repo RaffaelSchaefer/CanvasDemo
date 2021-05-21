@@ -2,6 +2,8 @@ import {dragUiElement} from "./window/drag.js";
 import {visibilityHandler} from "./window/close.js";
 import {previewColor} from "./preview/previewColor.js";
 
+previewColor(document.getElementById('colorPreview'),document.getElementById('colorRValue').value,document.getElementById('colorGValue').value,document.getElementById('colorBValue').value);
+
 dragUiElement(document.getElementById("toolBox"));
 dragUiElement(document.getElementById("optionsMenu"));
 dragUiElement(document.getElementById("brushMenu"));
