@@ -21,6 +21,8 @@
             <button class="menuEntry" id="dots">Dots</button>
             <button class="menuEntry" id="fill">Fill</button>
             <br>
+            <button class="menuEntry" id="useBrush">Brush</button>
+            <br>
             <button class="menuEntry" id="clear">Clear</button>
             <button class="menuEntry" id="export">Export</button>
         </div>
@@ -34,15 +36,6 @@
             <label for="resolution" class="menuEntry">Size</label><input type="range" min="1" max="100" class="menuSlider" id="resolution" value="4">
             <br>
             <label for="opacity" class="menuEntry">Opacity</label><input type="range" min="0" max="1" step="0.01" class="menuSlider" id="opacity" value="1">
-        </div>
-    </div>
-    <div id="brushMenu" class="menu">
-        <div id="brushMenuHeader" class="menuHeader">
-            <div id="brushMenuClose" class="menuClose"></div>
-            <p class="menuTitle">Brushes</p>
-        </div>
-        <div id="brushMenuContent" class="menuContent">
-            <button class="menuEntry" id="useBrush">Brush</button>
         </div>
     </div>
     <div id="colorMenu" class="menu">
@@ -62,6 +55,10 @@
         </div>
     </div>
     <canvas id="draw_zone"></canvas>
+    <div id="footer">
+        <p id="footerText">Noise Art by Raffael E. Schäfer</p>
+        <a href="https://github.com/RaffaelSchaefer" id="footerGithub">My Github</a>
+    </div>
     <script type="module" src="scripts/ui/ui.js"></script>
     <script type="module" src="scripts/draw/draw.js"></script>
 </body>
