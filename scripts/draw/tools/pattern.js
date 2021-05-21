@@ -1,26 +1,12 @@
-export function dotsWhite (ctx, width, height, resolution, alpha, posX, posY) {
-    for (let x = 0; x <= width/resolution; x++) {
-        for (let y = 0; y <= height/resolution; y++) {
-            if (x%resolution===0&&y%resolution===0) {
-                ctx.fillStyle = "rgb(255,255,255,"+alpha+")";
-                ctx.fillRect((x*resolution)+posX,(y*resolution)+posY,resolution,resolution);
+export function dots (ctx, width, height, size, alpha, r, g, b) {
+    for (let x = 0; x <= width/size; x++) {
+        for (let y = 0; y <= height/size; y++) {
+            if (x%size===0&&y%size===0) {
+                ctx.fillStyle = "rgba("+r+","+g+","+b+","+alpha+")";
+                ctx.fillRect(x*size,y*size,size,size);
             } else {
                 ctx.fillStyle = "rgba(0,0,0,0)";
-                ctx.fillRect((x*resolution)+posX,(y*resolution)+posY,resolution,resolution);
-            }
-        }
-    }
-}
-
-export function dotsBlack (ctx, width, height, resolution, alpha, posX, posY) {
-    for (let x = 0; x <= width/resolution; x++) {
-        for (let y = 0; y <= height/resolution; y++) {
-            if (x%resolution===0&&y%resolution===0) {
-                ctx.fillStyle = "rgb(0,0,0,"+alpha+")";
-                ctx.fillRect((x*resolution)+posX,(y*resolution)+posY,resolution,resolution);
-            } else {
-                ctx.fillStyle = "rgb(0,0,0,0)";
-                ctx.fillRect((x*resolution)+posX,(y*resolution)+posY,resolution,resolution);
+                ctx.fillRect(x*size,y*size,size,size);
             }
         }
     }
