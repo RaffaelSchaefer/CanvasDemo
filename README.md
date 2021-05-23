@@ -1,4 +1,5 @@
 # Noise Art
+![Noise Art Cover Art](https://github.com/RaffaelSchaefer/Noise-Art/blob/master/img/cover/cover.png?raw=true)
 A small art program which creates Artworks based on Noise patterns.
 ## Tools
 Noise Art has a small amount of useful tool.
