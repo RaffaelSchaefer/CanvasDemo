@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap')
 
+$defaultWindowMargin: 10px
+$defaultFontSize: 10px
+
+@mixin closeIconColor ($color)
+  background-color: $color
+  border: 4px solid $color
+
 /*ALL*/
 *
   margin: 0
@@ -25,7 +32,7 @@
     text-align: center
     text-decoration: none
     display: inline-block
-    font-size: 10px
+    font-size: $defaultFontSize
 
   .slider
     margin: 10px 10px
@@ -80,7 +87,7 @@
     width: 10px
     height: 10px
     text-align: center
-    font-size: 10px
+    font-size: $defaultFontSize
     border-radius: 50px
 
 .footer
@@ -101,21 +108,21 @@
   .text
     color: white
     padding: 8px 10px
-    font-size: 10px
+    font-size: $defaultFontSize
 
 /*IDS*/
 
 #toolBox
-  top: 10px
-  left: 10px
+  top: $defaultWindowMargin
+  left: $defaultWindowMargin
 
 #optionsMenu
-  top: 10px
-  left: 300px
+  top: $defaultWindowMargin
+  left: $defaultWindowMargin+290px
 
 #colorMenu
-  top: 210px
-  left: 10px
+  top: $defaultWindowMargin+200px
+  left: $defaultWindowMargin
 
 #colorMenuContent
   display: flex
@@ -136,13 +143,10 @@
   position: fixed
 
 #toolBoxHeaderClose
-  background-color: lightcoral
-  border: 4px solid lightcoral
+  @include closeIconColor(lightcoral)
 
 #optionsMenuClose
-  background-color: darkseagreen
-  border: 4px solid darkseagreen
+  @include closeIconColor(darkseagreen)
 
 #colorMenuClose
-  background-color: lightskyblue
-  border: 4px solid lightskyblue
+  @include closeIconColor(lightskyblue)
