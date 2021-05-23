@@ -8,58 +8,58 @@
 </head>
 <body>
     <div id="toolBox" class="menu">
-        <div id="toolBoxHeader" class="menuHeader">
-            <div id="toolBoxHeaderClose" class="menuClose"></div>
-            <p class="menuTitle">Tools</p>
+        <div id="toolBoxHeader" class="header">
+            <div id="toolBoxHeaderClose" class="close"></div>
+            <p class="title">Tools</p>
         </div>
-        <div id="toolBoxContent" class="menuContent">
-            <button class="menuEntry" id="coloredNoise">Colored Noise</button>
-            <button class="menuEntry" id="bwNoise">BW Noise</button>
-            <button class="menuEntry" id="bwGradient">BW Gradient</button>
+        <div id="toolBoxContent" class="content">
+            <button class="entry" id="coloredNoise">Colored Noise</button>
+            <button class="entry" id="bwNoise">BW Noise</button>
+            <button class="entry" id="bwGradient">BW Gradient</button>
             <br>
-            <button class="menuEntry" id="rgbParticle">RGB Particle</button>
-            <button class="menuEntry" id="dots">Dots</button>
-            <button class="menuEntry" id="fill">Fill</button>
+            <button class="entry" id="rgbParticle">RGB Particle</button>
+            <button class="entry" id="dots">Dots</button>
+            <button class="entry" id="fill">Fill</button>
             <br>
-            <button class="menuEntry" id="useBrush">Brush</button>
+            <button class="entry" id="useBrush">Brush</button>
             <br>
-            <button class="menuEntry" id="clear">Clear</button>
-            <button class="menuEntry" id="export">Export</button>
+            <button class="entry" id="clear">Clear</button>
+            <button class="entry" id="export">Export</button>
         </div>
     </div>
     <div id="optionsMenu" class="menu">
-        <div id="optionsMenuHeader" class="menuHeader">
-            <div id="optionsMenuClose" class="menuClose"></div>
-            <p class="menuTitle">Options</p>
+        <div id="optionsMenuHeader" class="header">
+            <div id="optionsMenuClose" class="close"></div>
+            <p class="title">Options</p>
         </div>
-        <div id="optionsMenuContent" class="menuContent">
-            <label for="resolution" class="menuEntry">Size</label><input type="range" min="1" max="100" class="menuSlider" id="resolution" value="4">
+        <div id="optionsMenuContent" class="content">
+            <label for="resolution" class="entry">Size</label><input type="range" min="1" max="100" class="slider" id="resolution" value="4">
             <br>
-            <label for="opacity" class="menuEntry">Opacity</label><input type="range" min="0" max="1" step="0.01" class="menuSlider" id="opacity" value="1">
+            <label for="opacity" class="entry">Opacity</label><input type="range" min="0" max="1" step="0.01" class="slider" id="opacity" value="1">
         </div>
     </div>
     <div id="colorMenu" class="menu">
-        <div id="colorMenuHeader" class="menuHeader">
-            <div id="colorMenuClose" class="menuClose"></div>
-            <p class="menuTitle">Color</p>
+        <div id="colorMenuHeader" class="header">
+            <div id="colorMenuClose" class="close"></div>
+            <p class="title">Color</p>
         </div>
-        <div id="colorMenuContent" class="menuContent">
+        <div id="colorMenuContent" class="content">
             <div id="colorMenuContentSliders">
-                <label for="colorRValue" class="menuEntry">R Value</label><input type="range" min="0" max="255" class="menuSlider" id="colorRValue" value="0">
+                <label for="colorRValue" class="entry">R Value</label><input type="range" min="0" max="255" class="slider" id="colorRValue" value="0">
                 <br>
-                <label for="colorGValue" class="menuEntry">G Value</label><input type="range" min="0" max="255" class="menuSlider" id="colorGValue" value="0">
+                <label for="colorGValue" class="entry">G Value</label><input type="range" min="0" max="255" class="slider" id="colorGValue" value="0">
                 <br>
-                <label for="colorBValue" class="menuEntry">B Value</label><input type="range" min="0" max="255" class="menuSlider" id="colorBValue" value="0">
+                <label for="colorBValue" class="entry">B Value</label><input type="range" min="0" max="255" class="slider" id="colorBValue" value="0">
             </div>
             <canvas id="colorPreview" width="50px" height="200px"></canvas>
         </div>
     </div>
     <canvas id="draw_zone"></canvas>
-    <div id="footer">
-        <p id="footerText">Noise Art by Raffael E. Schäfer</p>
-        <a href="https://github.com/RaffaelSchaefer" class="footerLink">Github</a>
-        <a href="https://www.youtube.com/channel/UCY-I1YEbShmzPwMcHXQ5NAg" class="footerLink">Youtube</a>
-        <a href="https://www.instagram.com/raffael_schaefer/" class="footerLink">Instagram</a>
+    <div class="footer" id="footer">
+        <p class="text">Noise Art by Raffael E. Schäfer</p>
+        <a href="https://github.com/RaffaelSchaefer" class="link">Github</a>
+        <a href="https://www.youtube.com/channel/UCY-I1YEbShmzPwMcHXQ5NAg" class="link">Youtube</a>
+        <a href="https://www.instagram.com/raffael_schaefer/" class="link">Instagram</a>
     </div>
     <script type="module" src="scripts/ui/ui.js"></script>
     <script type="module" src="scripts/draw/draw.js"></script>
