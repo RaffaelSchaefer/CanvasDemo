@@ -4,7 +4,6 @@
   "description": "A small Art Editor",
   "main": "index.html",
   "scripts": {
-    "dev": "npx http-server website 8080 -o",
     "sass": "node-sass --include-path sass sass/style.sass css/style.css"
   },
   "repository": {
@@ -17,9 +16,6 @@
     "url": "https://github.com/RaffaelSchaefer/Noise-Art/issues"
   },
   "homepage": "https://github.com/RaffaelSchaefer/Noise-Art#readme",
-  "devDependencies": {
-    "http-server": "^0.12.3"
-  },
   "dependencies": {
     "node-sass": "^6.0.0",
     "sass": "^1.34.0"
