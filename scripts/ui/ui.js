@@ -19,7 +19,7 @@ document.getElementById('colorGValue').addEventListener("click", function () {
 document.getElementById('colorBValue').addEventListener("click", function () {
     previewColor(document.getElementById('colorPreview'), document.getElementById('colorRValue').value, document.getElementById('colorGValue').value, document.getElementById('colorBValue').value);
 });
-//Touch support
+//Touch support for sliders
 document.getElementById('colorRValue').addEventListener("touchend", function () {
     previewColor(document.getElementById('colorPreview'), document.getElementById('colorRValue').value, document.getElementById('colorGValue').value, document.getElementById('colorBValue').value);
 });

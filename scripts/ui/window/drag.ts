@@ -2,8 +2,10 @@ export function dragUiElement(element: any) {
     let posX = 0, posY = 0, posXFetch = 0, posYFetch = 0;
     if (document.getElementById(element.id + "Header")) {
         document.getElementById(element.id + "Header")!.onmousedown = dragMouseDown;
+        document.getElementById(element.id + "Header")!.ontouchstart = dragMouseDown;
     } else {
         element.onmousedown = dragMouseDown;
+        element.ontouchstart = dragMouseDown;
     }
 
     function dragMouseDown(e: any) {
@@ -12,7 +14,9 @@ export function dragUiElement(element: any) {
         posXFetch = e.clientX;
         posYFetch = e.clientY;
         document.onmouseup = closeDragElement;
+        document.ontouchend = closeDragElement;
         document.onmousemove = elementDrag;
+        document.ontouchmove = elementDrag;
     }
 
     function elementDrag(e: any) {
@@ -28,6 +32,8 @@ export function dragUiElement(element: any) {
 
     function closeDragElement() {
         document.onmouseup = null;
+        document.ontouchstart = null;
         document.onmousemove = null;
+        document.ontouchmove = null;
     }
 }
