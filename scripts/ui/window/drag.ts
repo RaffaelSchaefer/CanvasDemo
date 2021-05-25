@@ -32,7 +32,7 @@ export function dragUiElement(element: any) {
 
     function closeDragElement() {
         document.onmouseup = null;
-        document.ontouchstart = null;
+        document.ontouchend = null;
         document.onmousemove = null;
         document.ontouchmove = null;
     }
