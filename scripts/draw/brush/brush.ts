@@ -12,7 +12,7 @@ export function drawLineOnCanvas(event: any, ctx: any, size: number, opacity: nu
 }
 
 export function brushMoveHandler(event: any, ctx: any, size: number, opacity: number, brushMode: boolean, r: number, g: number, b: number) {
-    if ((event.buttons === 1 || event.touches === 1) && brushMode) {
+    if (event.buttons === 1 && brushMode) {
         drawLineOnCanvas(event, ctx, size, opacity, r, g, b);
     } else {
         ctx.lineWidth = 1;

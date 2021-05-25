@@ -55,10 +55,6 @@ document.getElementById('draw_zone').addEventListener('mousemove', function (eve
     // @ts-ignore
     brushMoveHandler(event, canvasContext, document.getElementById('resolution').value, document.getElementById('opacity').value, brushMode, document.getElementById('colorRValue').value, document.getElementById('colorGValue').value, document.getElementById('colorBValue').value);
 });
-document.getElementById('draw_zone').addEventListener('touchmove', function (event) {
-    // @ts-ignore
-    brushMoveHandler(event, canvasContext, document.getElementById('resolution').value, document.getElementById('opacity').value, brushMode, document.getElementById('colorRValue').value, document.getElementById('colorGValue').value, document.getElementById('colorBValue').value);
-});
 //Resize reload
 window.addEventListener('resize', function () {
     window.location.reload();
