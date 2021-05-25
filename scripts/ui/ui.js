@@ -19,10 +19,7 @@ document.getElementById('colorGValue').addEventListener("click", function () {
 document.getElementById('colorBValue').addEventListener("click", function () {
     previewColor(document.getElementById('colorPreview'), document.getElementById('colorRValue').value, document.getElementById('colorGValue').value, document.getElementById('colorBValue').value);
 });
-//Touch movement
-document.getElementById('toolBoxHeaderClose').addEventListener("touchstart", function () { visibilityHandler(document.getElementById('toolBoxContent')); });
-document.getElementById('optionsMenuClose').addEventListener("touchstart", function () { visibilityHandler(document.getElementById('optionsMenuContent')); });
-document.getElementById('colorMenuClose').addEventListener("touchstart", function () { visibilityHandler(document.getElementById('colorMenuContent')); });
+//Touch support
 document.getElementById('colorRValue').addEventListener("touchend", function () {
     previewColor(document.getElementById('colorPreview'), document.getElementById('colorRValue').value, document.getElementById('colorGValue').value, document.getElementById('colorBValue').value);
 });
