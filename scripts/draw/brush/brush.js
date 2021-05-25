@@ -8,7 +8,7 @@ export function drawLineOnCanvas(event, ctx, size, opacity, r, g, b) {
     ctx.stroke();
 }
 export function brushMoveHandler(event, ctx, size, opacity, brushMode, r, g, b) {
-    if (event.buttons === 1 && brushMode) {
+    if ((event.buttons === 1 || event.touches === 1) && brushMode) {
         drawLineOnCanvas(event, ctx, size, opacity, r, g, b);
     }
     else {
