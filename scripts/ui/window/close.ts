@@ -1,8 +1,7 @@
-export function visibilityHandler(element) {
+export function visibilityHandler (element: any) {
     if (element.style.visibility === 'visible') {
         element.style.visibility = 'hidden';
-    }
-    else {
+    } else {
         element.style.visibility = 'visible';
     }
 }
