@@ -10,7 +10,7 @@ export function dragUiElement(element) {
     }
     function dragMouseDown(e) {
         e = e || window.event;
-        e.preventDefault();
+        //e.preventDefault();
         posXFetch = e.clientX;
         posYFetch = e.clientY;
         document.onmouseup = closeDragElement;
