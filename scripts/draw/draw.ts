@@ -4,7 +4,6 @@ import {exportCanvas} from "./util/export.js";
 import {bwGradient, rbGradient} from './tools/gradient.js';
 import {colorNoise, bwNoise, blendedBWNoise} from './tools/noise.js';
 import {dots, saw} from "./tools/pattern.js";
-import {rgbParticle} from "./tools/misc.js";
 import {brushMoveHandler,} from "./brush/brush.js";
 import {fillCanvas} from "./tools/fill.js";
 //Brush let
