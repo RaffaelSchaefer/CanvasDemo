@@ -15,13 +15,13 @@ export function bwNoise(ctx, width, height, resolution, alpha) {
         }
     }
 }
-export function blendedBWNoise(ctx, width, height, resolution, alpha, distance) {
+export function blendedBWNoise(ctx, width, height, resolution, alpha) {
     let randomColor = 255;
     for (let x = 0; x <= width / resolution; x++) {
         for (let y = 0; y <= height / resolution; y++) {
             let lastRandomColor = randomColor;
             randomColor = Math.floor(Math.random() * 255);
-            if (x % distance && y % distance) {
+            if (x % 2 && y % 2) {
                 ctx.fillStyle = "rgb(" + randomColor + "," + randomColor + "," + randomColor + "," + alpha + ")";
             }
             else {

@@ -3,7 +3,7 @@ import {clearCanvas} from "./util/clear.js";
 import {exportCanvas} from "./util/export.js";
 import {bwGradient, rbGradient} from './tools/gradient.js';
 import {colorNoise, bwNoise, blendedBWNoise} from './tools/noise.js';
-import {dots} from "./tools/pattern.js";
+import {dots, saw} from "./tools/pattern.js";
 import {rgbParticle} from "./tools/misc.js";
 import {brushMoveHandler,} from "./brush/brush.js";
 import {fillCanvas} from "./tools/fill.js";
@@ -26,7 +26,7 @@ window.onload = function () {
     });
     document.getElementById('blendedBWNoise')!.addEventListener('click', function () {
         // @ts-ignore
-        blendedBWNoise(canvasContext,screenWidth,screenHeight,document.getElementById('resolution')!.value,document.getElementById('opacity')!.value,2)
+        blendedBWNoise(canvasContext,screenWidth,screenHeight,document.getElementById('resolution')!.value,document.getElementById('opacity')!.value)
     });
     document.getElementById('bwGradient')!.addEventListener('click', function () {
         // @ts-ignore
@@ -36,9 +36,10 @@ window.onload = function () {
         // @ts-ignore
         rbGradient(canvasContext,screenWidth,screenHeight,document.getElementById('resolution')!.value,document.getElementById('opacity')!.value)
     });
-    document.getElementById('rgbParticle')!.addEventListener('click',function () {
+    document.getElementById('saw')!.addEventListener('click',function () {
         // @ts-ignore
-        rgbParticle(canvasContext,screenWidth,screenHeight,document.getElementById('resolution')!.value)});
+        saw(canvasContext,screenWidth,screenHeight,document.getElementById('resolution')!.value,document.getElementById('opacity')!.value,document.getElementById('colorRValue')!.value,document.getElementById('colorGValue')!.value,document.getElementById('colorBValue')!.value)
+    });
     document.getElementById('dots')!.addEventListener('click',function () {
         // @ts-ignore
         dots(canvasContext,screenWidth,screenHeight,document.getElementById('resolution')!.value,document.getElementById('opacity')!.value,document.getElementById('colorRValue')!.value,document.getElementById('colorGValue')!.value,document.getElementById('colorBValue')!.value)
