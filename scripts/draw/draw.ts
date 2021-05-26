@@ -2,7 +2,7 @@ import {setupHighDpiCanvas} from "./util/setup.js";
 import {clearCanvas} from "./util/clear.js";
 import {exportCanvas} from "./util/export.js";
 import {bwGradient, rbGradient} from './tools/gradient.js';
-import {colorNoise, bwNoise, mixedNoise} from './tools/noise.js';
+import {colorNoise, bwNoise, blendedBWNoise} from './tools/noise.js';
 import {dots} from "./tools/pattern.js";
 import {rgbParticle} from "./tools/misc.js";
 import {brushMoveHandler,} from "./brush/brush.js";
@@ -24,9 +24,9 @@ window.onload = function () {
         // @ts-ignore
         bwNoise(canvasContext,screenWidth,screenHeight,document.getElementById('resolution')!.value,document.getElementById('opacity')!.value)
     });
-    document.getElementById('mixedNoise')!.addEventListener('click', function () {
+    document.getElementById('blendedBWNoise')!.addEventListener('click', function () {
         // @ts-ignore
-        mixedNoise(canvasContext,screenWidth,screenHeight,document.getElementById('resolution')!.value,document.getElementById('opacity')!.value)
+        blendedBWNoise(canvasContext,screenWidth,screenHeight,document.getElementById('resolution')!.value,document.getElementById('opacity')!.value)
     });
     document.getElementById('bwGradient')!.addEventListener('click', function () {
         // @ts-ignore

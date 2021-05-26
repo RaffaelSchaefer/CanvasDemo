@@ -18,3 +18,4 @@ export function rbGradient(ctx, width, height, resolution, alpha) {
         }
     }
 }
+//TODO Add colorGradient

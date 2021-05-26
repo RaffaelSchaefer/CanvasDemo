@@ -8,3 +8,4 @@ export function dots(ctx, width, height, size, alpha, r, g, b) {
         }
     }
 }
+//TODO Add more patterns

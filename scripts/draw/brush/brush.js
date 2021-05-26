@@ -1,3 +1,5 @@
+//TODO Touch support for brushes
+//TODO Fix Gaps on the lines
 export function drawLineOnCanvas(event, ctx, size, opacity, r, g, b) {
     let posX = event.offsetX, posY = event.offsetY;
     ctx.lineWidth = size;
