@@ -26,7 +26,7 @@ window.onload = function () {
     });
     document.getElementById('blendedBWNoise').addEventListener('click', function () {
         // @ts-ignore
-        blendedBWNoise(canvasContext, screenWidth, screenHeight, document.getElementById('resolution').value, document.getElementById('opacity').value);
+        blendedBWNoise(canvasContext, screenWidth, screenHeight, document.getElementById('resolution').value, document.getElementById('opacity').value, 2);
     });
     document.getElementById('bwGradient').addEventListener('click', function () {
         // @ts-ignore
