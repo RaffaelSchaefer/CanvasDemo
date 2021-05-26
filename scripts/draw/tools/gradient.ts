@@ -8,7 +8,7 @@ export function bwGradient (ctx: any, width: number, height: number, resolution:
     }
 }
 
-export function rgbGradient (ctx:any, width: number, height: number, resolution: number, alpha: number) {
+export function rbGradient (ctx:any, width: number, height: number, resolution: number, alpha: number) {
     for (let x = 0; x <= width/resolution; x++) {
         for (let y = 0; y <= height/resolution; y++) {
             let rValue = x*resolution%256;
