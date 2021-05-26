@@ -17,6 +17,7 @@ export function bwNoise (ctx: any, width: number, height: number, resolution: nu
     }
 }
 
+//TODO Rework mixedNoise
 export function mixedNoise (ctx: any, width: number, height: number, resolution: number, alpha: number) {
     for (let x = 0; x <= width/resolution; x++) {
         for (let y = 0; y <= height/resolution; y++) {

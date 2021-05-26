@@ -1,3 +1,4 @@
+//TODO Touch support for window dragging
 export function dragUiElement(element: any) {
     let posX = 0, posY = 0, posXFetch = 0, posYFetch = 0;
     if (document.getElementById(element.id + "Header")) {

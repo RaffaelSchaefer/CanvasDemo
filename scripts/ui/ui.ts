@@ -32,3 +32,5 @@ document.getElementById('colorGValue')!.addEventListener("touchend",function () 
     previewColor(document.getElementById('colorPreview'),document.getElementById('colorRValue')!.value,document.getElementById('colorGValue')!.value,document.getElementById('colorBValue')!.value)});
 document.getElementById('colorBValue')!.addEventListener("touchend",function () { // @ts-ignore
     previewColor(document.getElementById('colorPreview'),document.getElementById('colorRValue')!.value,document.getElementById('colorGValue')!.value,document.getElementById('colorBValue')!.value)});
+
+//TODO Find a better way to hide windows

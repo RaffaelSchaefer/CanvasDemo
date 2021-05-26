@@ -66,3 +66,5 @@ document.getElementById('draw_zone')!.addEventListener('mousemove',function (eve
 window.addEventListener('resize', function () {
     window.location.reload();
 });
+
+//TODO Clean up draw.ts
