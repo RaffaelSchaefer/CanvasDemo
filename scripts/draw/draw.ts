@@ -3,7 +3,7 @@ import {clearCanvas} from "./util/clear.js";
 import {exportCanvas} from "./util/export.js";
 import {bwGradient, rbGradient} from './tools/gradient.js';
 import {colorNoise, bwNoise, blendedBWNoise} from './tools/noise.js';
-import {dots, saw} from "./tools/pattern.js";
+import {checkeredPattern, dots, saw} from "./tools/pattern.js";
 import {brushMoveHandler,} from "./brush/brush.js";
 import {fillCanvas} from "./tools/fill.js";
 //Brush let
@@ -55,6 +55,10 @@ window.onload = function () {
     });
     document.getElementById('useBrush')!.addEventListener('click', function () {
         brushMode = !brushMode;
+    });
+    document.getElementById('checkeredPattern')!.addEventListener('click', function () {
+        // @ts-ignore
+        checkeredPattern(canvasContext,screenWidth,screenHeight,document.getElementById('resolution')!.value,document.getElementById('opacity')!.value,document.getElementById('colorRValue')!.value,document.getElementById('colorGValue')!.value,document.getElementById('colorBValue')!.value);
     });
 }
 //Brush
