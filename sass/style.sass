@@ -7,6 +7,7 @@ $defaultFontColor: white
 $defaultHeaderColor: darkgrey
 $defaultContentColor: grey
 $defaultFooterColor: dimgrey
+$defaultShadowColor: rgba(0,0,0,0.5)
 
 
 @mixin closeIconColor ($color)
@@ -17,7 +18,7 @@ $defaultFooterColor: dimgrey
     background-color: $color
     border: 4px solid $color
     border-radius: 15px
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.5)
+    box-shadow: 5px 5px 10px $defaultShadowColor
 
 /*ALL*/
 *
