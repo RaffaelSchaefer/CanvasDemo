@@ -6,7 +6,6 @@ import {colorNoise, bwNoise, blendedBWNoise} from './tools/noise.js';
 import {checkeredPattern, dots, saw} from "./tools/pattern.js";
 import {brushMoveHandler,} from "./brush/brush.js";
 import {fillCanvas} from "./tools/fill.js";
-import {colorRGB, colorRGBA} from "./util/color.js";
 //Brush let
 let brushMode = false;
 //Screen size calculation

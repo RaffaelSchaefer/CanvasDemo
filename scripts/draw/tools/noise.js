@@ -1,7 +1,9 @@
+import { colorRGBA } from "../util/color.js";
 export function colorNoise(ctx, width, height, resolution, alpha) {
     for (let x = 0; x <= width / resolution; x++) {
         for (let y = 0; y <= height / resolution; y++) {
-            ctx.fillStyle = "rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + alpha + ")";
+            let randomColor = new colorRGBA(Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), alpha);
+            ctx.fillStyle = randomColor.color;
             ctx.fillRect(x * resolution, y * resolution, resolution, resolution);
         }
     }
@@ -9,24 +11,27 @@ export function colorNoise(ctx, width, height, resolution, alpha) {
 export function bwNoise(ctx, width, height, resolution, alpha) {
     for (let x = 0; x <= width / resolution; x++) {
         for (let y = 0; y <= height / resolution; y++) {
-            let randomColor = Math.floor(Math.random() * 255);
-            ctx.fillStyle = "rgb(" + randomColor + "," + randomColor + "," + randomColor + "," + alpha + ")";
+            let randomColorValue = Math.floor(Math.random() * 255);
+            let randomColor = new colorRGBA(randomColorValue, randomColorValue, randomColorValue, alpha);
+            ctx.fillStyle = randomColor.color;
             ctx.fillRect(x * resolution, y * resolution, resolution, resolution);
         }
     }
 }
 export function blendedBWNoise(ctx, width, height, resolution, alpha) {
-    let randomColor = 255;
+    let randomColorValue = 255;
     for (let x = 0; x <= width / resolution; x++) {
         for (let y = 0; y <= height / resolution; y++) {
-            let lastRandomColor = randomColor;
-            randomColor = Math.floor(Math.random() * 255);
+            let lastRandomColorValue = randomColorValue;
+            randomColorValue = Math.floor(Math.random() * 255);
             if (x % 2 && y % 2) {
-                ctx.fillStyle = "rgb(" + randomColor + "," + randomColor + "," + randomColor + "," + alpha + ")";
+                let fillColor = new colorRGBA(randomColorValue, randomColorValue, randomColorValue, alpha);
+                ctx.fillStyle = fillColor.color;
             }
             else {
-                let fillColor = (lastRandomColor + randomColor) / 2;
-                ctx.fillStyle = "rgb(" + fillColor + "," + fillColor + "," + fillColor + "," + alpha + ")";
+                let fillColorValue = (lastRandomColorValue + randomColorValue) / 2;
+                let fillColor = new colorRGBA(fillColorValue, fillColorValue, fillColorValue, alpha);
+                ctx.fillStyle = fillColor.color;
             }
             ctx.fillRect(x * resolution, y * resolution, resolution, resolution);
         }
