@@ -4,3 +4,5 @@ node_modules
 package-lock.json
 .DS_Store
 noiseArt-darwin-x64
+noiseArt-win32-x64
+noiseArt-linux-x64
