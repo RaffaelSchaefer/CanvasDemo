@@ -9,8 +9,13 @@
     "minify_js": "npx --no-install uglifyjs-folder --log-level warning -x .js ./script/ -eo ./script/",
     "complete_compile": "npm run typescript_compile && npm run minify_js && npm run sass_compile",
     "start": "electron .",
-    "build_app": "electron-packager ./ noiseArt --platform=darwin --arch=x64",
-    "build": "npm run complete_compile && npm run build_app"
+    "build_app_macOS": "electron-packager ./ noiseArt --platform=darwin --arch=x64",
+    "build_macOS": "npm run complete_compile && npm run build_app_macOS",
+    "build_app_win": "electron-packager ./ noiseArt --platform=win32 --arch=x64",
+    "build_win": "npm run complete_compile && npm run build_app_win",
+    "build_app_linux": "electron-packager ./ noiseArt --platform=Linux --arch=x64",
+    "build_linux": "npm run complete_compile && npm run build_app_linux",
+    "build_all": "npm run build_win && npm run build_app_macOS && npm run build_app_linux"
   },
   "repository": {
     "type": "git",

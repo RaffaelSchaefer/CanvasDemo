@@ -4,7 +4,7 @@ function createWindow() {
     const win = new BrowserWindow({
         width: 800,
         height: 600,
-        icon: __dirname + 'img/app_icon/app_icon.icns'
+        icon: __dirname + 'img/app_icon/app_icon.iconset/icon_512@2x.png'
     });
     win.loadFile('index.html');
 }
