@@ -5,4 +5,5 @@ export function exportCanvas(canvas) {
     link.click();
     // @ts-ignore
     link.delete;
+    let notification = new Notification('Noise-Art', { body: 'Your artwork has been exported' });
 }
