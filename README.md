@@ -1,6 +1,6 @@
 # Noise Art
 
-![Noise Art Cover Art](https://github.com/RaffaelSchaefer/Noise-Art/blob/master/img/cover/cover.png?raw=true)
+![Noise Art Cover Art](https://github.com/RaffaelSchaefer/Noise-Art/blob/master/assets/github/cover_art/cover.png?raw=true)
 [![wakatime](https://wakatime.com/badge/github/RaffaelSchaefer/Noise-Art.svg)](https://wakatime.com/badge/github/RaffaelSchaefer/Noise-Art)
 
 A small art program which creates Artworks based on Noise patterns.
