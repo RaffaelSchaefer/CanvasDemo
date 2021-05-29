@@ -1,4 +1,5 @@
 const { app, BrowserWindow, Menu } = require("electron");
+const isMacOS = process.platform === 'darwin';
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -22,7 +23,7 @@ app.whenReady().then(() => {
     }
   });
 
-  const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
+  const mainMenu = Menu.buildFromTemplate(template);
   Menu.setApplicationMenu(mainMenu);
 });
 
@@ -33,22 +34,85 @@ app.on("window-all-closed", function () {
 });
 
 //Menu template
-const mainMenuTemplate: any[] = [
+const template = [
+  // { role: 'appMenu' }
+  ...(isMacOS ? [{
+    label: app.name,
+    submenu: [
+      { role: 'about' },
+      { role: 'quit' }
+    ]
+  }] : []),
+  // { role: 'fileMenu' }
   {
-    label:'File',
-    subMenu: [
+    label: 'File',
+    submenu: [
       {
-        label:'Export'
+        label: 'Clear Canvas'
       },
       {
-        label:'Quit',
-        click () {
-          app.quit;
-        }
+        label: 'Export Canvas'
+      }
+    ]
+  },
+  // { role: 'editMenu' }
+  {
+    label: 'Edit',
+    submenu: [
+      {
+        label: 'Colored Noise'
+      },
+      {
+        label: 'Black & White Noise'
+      },
+      {
+        label: 'Blended Noise'
+      },
+      {
+        type: 'separator'
+      },
+      {
+        label: 'Black & White Gradient'
+      },
+      {
+        label: 'Red & Blue Gradient'
+      },
+      {
+        type: 'separator'
+      },
+      {
+        label: 'Saw Pattern'
+      },
+      {
+        label: 'Dotted Pattern'
+      },
+      {
+        label: 'Checkered Pattern'
+      },
+      {
+        type: 'separator'
+      },
+      {
+        label: 'Fill'
+      },
+      {
+        type: 'separator'
+      },
+      {
+        label: 'Use Brush'
       }
     ]
   },
   {
-    label: 'Tools'
+    role: 'help',
+    submenu: [
+      {
+        label: 'Learn More about Noise-Art',
+        click: async () => {
+          const { shell } = require('electron')
+          await shell.openExternal('https://github.com/RaffaelSchaefer/Noise-Art')
+        }
+      }
+    ]
   }
 ];
