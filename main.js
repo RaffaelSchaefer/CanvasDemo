@@ -7,7 +7,7 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
     },
-    icon: __dirname + "img/app_icon/app_icon.icns",
+    icon: __dirname + "/img/Icon/Icon.icns",
   });
   win.loadFile("index.html");
 }
