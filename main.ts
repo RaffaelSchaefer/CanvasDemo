@@ -1,5 +1,22 @@
 const { app, BrowserWindow, Menu } = require("electron");
+
+const path = require('path')
+
 const isMacOS = process.platform === 'darwin';
+const isWin = process.platform === 'win32';
+const isLinux = process.platform === 'linux';
+
+let iconPath: string = "";
+
+if (isMacOS) {
+  iconPath = path.join(__dirname, '/img/Icon/Icon.icns');
+}
+if (isWin) {
+  iconPath = path.join(__dirname, '/img/Icon/Icon.ico');
+}
+if (isLinux) {
+  iconPath = path.join(__dirname, '/img/Icon/Icon.png');
+}
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -8,7 +25,7 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
     },
-    icon: __dirname + '/img/Icon/Icon.icns',
+    icon: iconPath,
   });
 
   win.loadFile("index.html");
