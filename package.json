@@ -4,9 +4,11 @@
   "description": "A small Art Editor",
   "main": "main.js",
   "scripts": {
+    "prettier_run": "npx prettier --write .",
+    "prettier_check": "npx prettier --check",
     "sass_compile": "npx --no-install sass --no-source-map ./sass/:./css/",
     "typescript_compile": "npx --no-install tsc",
-    "complete_compile": "npm run typescript_compile && npm run sass_compile",
+    "complete_compile": "npm run typescript_compile && npm run sass_compile && npm run prettier_run",
     "start": "electron .",
     "build_app_macOS": "electron-packager ./ noiseArt --platform=darwin --arch=x64",
     "build_macOS": "npm run complete_compile && npm run build_app_macOS",
