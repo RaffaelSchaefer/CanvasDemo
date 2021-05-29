@@ -6,13 +6,13 @@ const isWin = process.platform === "win32";
 const isLinux = process.platform === "linux";
 let iconPath = "";
 if (isMacOS) {
-  iconPath = path.join(__dirname, "/img/Icon/Icon.icns");
+  iconPath = path.join(__dirname, "/assets/icons/mac/icons.icns");
 }
 if (isWin) {
-  iconPath = path.join(__dirname, "/img/Icon/Icon.ico");
+  iconPath = path.join(__dirname, "/assets/icons/win/icons.ico");
 }
 if (isLinux) {
-  iconPath = path.join(__dirname, "/img/Icon/Icon.png");
+  iconPath = path.join(__dirname, "/assets/icons/png/icons.png");
 }
 function createWindow() {
   const win = new BrowserWindow({
