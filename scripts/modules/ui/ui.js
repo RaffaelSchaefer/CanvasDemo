@@ -28,6 +28,7 @@ document
     visibilityHandler(document.getElementById("colorMenuContent"));
   });
 document.getElementById("colorRValue").addEventListener("click", function () {
+  // @ts-ignore
   previewColor(
     document.getElementById("colorPreview"),
     document.getElementById("colorRValue").value,
@@ -36,6 +37,7 @@ document.getElementById("colorRValue").addEventListener("click", function () {
   );
 });
 document.getElementById("colorGValue").addEventListener("click", function () {
+  // @ts-ignore
   previewColor(
     document.getElementById("colorPreview"),
     document.getElementById("colorRValue").value,
@@ -44,6 +46,7 @@ document.getElementById("colorGValue").addEventListener("click", function () {
   );
 });
 document.getElementById("colorBValue").addEventListener("click", function () {
+  // @ts-ignore
   previewColor(
     document.getElementById("colorPreview"),
     document.getElementById("colorRValue").value,
@@ -70,6 +73,7 @@ document
 document
   .getElementById("colorRValue")
   .addEventListener("touchend", function () {
+    // @ts-ignore
     previewColor(
       document.getElementById("colorPreview"),
       document.getElementById("colorRValue").value,
@@ -80,6 +84,7 @@ document
 document
   .getElementById("colorGValue")
   .addEventListener("touchend", function () {
+    // @ts-ignore
     previewColor(
       document.getElementById("colorPreview"),
       document.getElementById("colorRValue").value,
@@ -90,6 +95,7 @@ document
 document
   .getElementById("colorBValue")
   .addEventListener("touchend", function () {
+    // @ts-ignore
     previewColor(
       document.getElementById("colorPreview"),
       document.getElementById("colorRValue").value,
