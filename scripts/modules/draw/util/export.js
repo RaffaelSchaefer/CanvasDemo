@@ -1,11 +1,1 @@
-export function exportCanvas(canvas) {
-  let link = document.createElement("a");
-  link.download = "Noise-Art.png";
-  link.href = canvas.toDataURL("image/png");
-  link.click();
-  // @ts-ignore
-  link.delete;
-  let notification = new Notification("Noise-Art", {
-    body: "Your artwork has been exported",
-  });
-}
+export function exportCanvas(e){let t=document.createElement("a");t.download="Noise-Art.png",t.href=e.toDataURL("image/png"),t.click(),t.delete;new Notification("Noise-Art",{body:"Your artwork has been exported"})}

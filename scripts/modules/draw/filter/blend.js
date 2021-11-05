@@ -1,10 +1,1 @@
-//TODO Include blend modes to Noise Art
-export function alphaOver(color1, color2, alpha) {
-  return color1 + color2 * alpha;
-}
-export function multiply(color1, color2, alpha) {
-  return (color1 * (color2 * alpha)) % 255;
-}
-export function subtract(color1, color2, alpha) {
-  return color1 - color2 * alpha;
-}
+export function alphaOver(t,r,n){return t+r*n}export function multiply(t,r,n){return t*(r*n)%255}export function subtract(t,r,n){return t-r*n}

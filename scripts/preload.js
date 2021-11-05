@@ -1,2 +1,1 @@
-"use strict";
-window.addEventListener("DOMContentLoaded", () => {});
+"use strict";window.addEventListener("DOMContentLoaded",()=>{});

@@ -1,5 +1,1 @@
-export function clearCanvas(ctx) {
-  let screenHeight = window.innerHeight;
-  let screenWidth = window.innerWidth;
-  ctx.clearRect(0, 0, screenWidth, screenHeight);
-}
+export function clearCanvas(n){let e=window.innerHeight,i=window.innerWidth;n.clearRect(0,0,i,e)}
