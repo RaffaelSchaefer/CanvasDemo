@@ -1,1 +1,0 @@
-import{colorRGB}from"../../draw/util/color.js";export function previewColor(o,l,t,e){let r=new colorRGB(l,t,e),i=o.getContext("2d");i.fillStyle=r.color,i.fillRect(0,0,o.width,o.height)}

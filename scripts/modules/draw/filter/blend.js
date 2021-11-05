@@ -1,1 +1,0 @@
-export function alphaOver(t,r,n){return t+r*n}export function multiply(t,r,n){return t*(r*n)%255}export function subtract(t,r,n){return t-r*n}

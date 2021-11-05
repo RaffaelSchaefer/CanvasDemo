@@ -1,1 +1,0 @@
-import{colorRGBA}from"../util/color.js";export function bwGradient(l,o,t,r,e){for(let f=0;f<=o/r;f++)for(let o=0;o<=t/r;o++){let t=o*r%256,c=new colorRGBA(t,t,t,e);l.fillStyle=c.color,l.fillRect(f*r,o*r,r,r)}}export function rbGradient(l,o,t,r,e){for(let f=0;f<=o/r;f++)for(let o=0;o<=t/r;o++){let t=new colorRGBA(f*r%256,0,o*r%256,e);l.fillStyle=t.color,l.fillRect(f*r,o*r,r,r)}}

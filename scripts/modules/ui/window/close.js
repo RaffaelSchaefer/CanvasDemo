@@ -1,1 +1,0 @@
-export function visibilityHandler(i){"visible"===i.style.visibility?i.style.visibility="hidden":i.style.visibility="visible"}
