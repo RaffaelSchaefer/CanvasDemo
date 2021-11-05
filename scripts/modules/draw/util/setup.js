@@ -1,1 +1,0 @@
-export function setupHighDpiCanvas(t){let e=window.devicePixelRatio||1,i=t.getBoundingClientRect();t.width=i.width*e,t.height=i.height*e;let n=t.getContext("2d");return n.scale(e,e),n}

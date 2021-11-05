@@ -1,1 +1,0 @@
-export function clearCanvas(n){let e=window.innerHeight,i=window.innerWidth;n.clearRect(0,0,i,e)}
