@@ -7,17 +7,12 @@
     "sass_compile": "npx --no-install sass --no-source-map ./sass/:./css/",
     "typescript_compile": "npx --no-install tsc",
     "minify": "npx --no-install uglifyjs-folder --log-level warning -x .js ./scripts/ -eo ./scripts/ && terser main.js --compress --mangle --output main.js",
-    "complete_compile": "npm run typescript_compile && npm run sass_compile && npm run minify",
-    "start": "npm run complete_compile && electron --trace-warnings .",
-    "reload": "rs",
-    "test": "jest",
+    "compile": "npm run typescript_compile && npm run sass_compile && npm run minify",
     "build_app_macOS": "electron-packager ./ NoiseArt --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns",
-    "build_macOS": "npm run complete_compile && npm run build_app_macOS",
-    "build_app_win": "electron-packager ./ NoiseArt --platform=win32 --arch=x64 --icon=assets/icons/win/icon.ico",
-    "build_win": "npm run complete_compile && npm run build_app_win",
-    "build_app_linux": "electron-packager ./ NoiseArt --platform=linux --arch=x64 --icon=assets/icons/png/icon.png",
-    "build_linux": "npm run complete_compile && npm run build_app_linux",
-    "build_all": "npm run complete_compile && npm run build_app_win && npm run build_app_macOS && npm run build_app_linux"
+    "build_macOS": "npm run compile && npm run build_app_macOS",
+    "start": "npm run compile && electron --trace-warnings .",
+    "reload": "rs",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -37,5 +32,7 @@
     "terser": "^5.7.0",
     "typescript": "^3.1.6",
     "uglifyjs-folder": "^2.0.0"
+  },
+  "dependencies": {
   }
 }
