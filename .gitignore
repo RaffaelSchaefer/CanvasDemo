@@ -5,8 +5,9 @@ noiseArt-darwin-x64
 noiseArt-win32-x64
 noiseArt-linux-x64
 # Filetype
-scripts/**.js
+*.js
 *.css
 # Files
 .DS_Store
-main.js
+#Exceptions
+!test/*.js
