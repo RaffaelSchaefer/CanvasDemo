@@ -1,6 +1,6 @@
 {
   "name": "noise-art",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A small Art Editor",
   "main": "main.js",
   "scripts": {
@@ -10,6 +10,7 @@
     "complete_compile": "npm run typescript_compile && npm run sass_compile && npm run minify",
     "start": "npm run complete_compile && electron --trace-warnings .",
     "reload": "rs",
+    "test": "jest",
     "build_app_macOS": "electron-packager ./ NoiseArt --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns",
     "build_macOS": "npm run complete_compile && npm run build_app_macOS",
     "build_app_win": "electron-packager ./ NoiseArt --platform=win32 --arch=x64 --icon=assets/icons/win/icon.ico",
@@ -28,14 +29,13 @@
     "url": "https://github.com/RaffaelSchaefer/Noise-Art/issues"
   },
   "homepage": "https://github.com/RaffaelSchaefer/Noise-Art#readme",
-  "dependencies": {
-  },
   "devDependencies": {
-    "sass": "^1.34.0",
-    "typescript": "^3.1.6",
     "electron": "^13.0.1",
     "electron-packager": "^15.2.0",
-    "uglifyjs-folder": "^2.0.0",
-    "terser": "^5.7.0"
+    "jest": "^27.3.1",
+    "sass": "^1.34.0",
+    "terser": "^5.7.0",
+    "typescript": "^3.1.6",
+    "uglifyjs-folder": "^2.0.0"
   }
 }
