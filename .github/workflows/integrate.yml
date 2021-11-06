@@ -13,5 +13,5 @@ jobs:
         with:
           node-version: 17
       - run: npm ci
-      - run: npm run complete_compile
+      - run: npm run compile
       - run: npm test
