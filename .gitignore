@@ -9,4 +9,3 @@ noiseArt-linux-x64
 *.css
 # Files
 .DS_Store
-package-lock.json
