@@ -10,4 +10,5 @@ noiseArt-linux-x64
 # Files
 .DS_Store
 #Exceptions
-!test/*.js
+!jest.config.js
+!babel.config.js
