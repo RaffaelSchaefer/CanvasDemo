@@ -12,7 +12,7 @@
     "build_macOS": "npm run compile && npm run build_app_macOS",
     "start": "npm run compile && electron --trace-warnings .",
     "reload": "rs",
-    "test": "npx jest"
+    "test": "npm run typescript_compile && npx jest"
   },
   "repository": {
     "type": "git",
