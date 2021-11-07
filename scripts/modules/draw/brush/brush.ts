@@ -1,16 +1,16 @@
 //TODO Touch support for brushes
 //TODO Fix Gaps on the lines
 export function drawLineOnCanvas(
-  event: any,
-  ctx: any,
-  size: number,
-  opacity: number,
-  r: number,
-  g: number,
-  b: number
+    event: any,
+    ctx: any,
+    size: number,
+    opacity: number,
+    r: number,
+    g: number,
+    b: number
 ) {
   let posX = event.offsetX,
-    posY = event.offsetY;
+      posY = event.offsetY;
 
   ctx.lineWidth = size;
   ctx.strokeStyle = "rgba(" + r + "," + g + "," + b + "," + opacity + ")";
@@ -23,14 +23,14 @@ export function drawLineOnCanvas(
 }
 
 export function brushMoveHandler(
-  event: any,
-  ctx: any,
-  size: number,
-  opacity: number,
-  brushMode: boolean,
-  r: number,
-  g: number,
-  b: number
+    event: any,
+    ctx: any,
+    size: number,
+    opacity: number,
+    brushMode: boolean,
+    r: number,
+    g: number,
+    b: number
 ) {
   if (event.buttons === 1 && brushMode) {
     drawLineOnCanvas(event, ctx, size, opacity, r, g, b);

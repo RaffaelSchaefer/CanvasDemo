@@ -13,22 +13,22 @@ let screenHeight = window.innerHeight;
 let screenWidth = window.innerWidth;
 //Canvas implementation
 let canvasContext = setupHighDpiCanvas(
-  document.getElementById("draw_zone") as HTMLCanvasElement
+    document.getElementById("draw_zone") as HTMLCanvasElement
 );
 //Event Handler
 window.onload = function () {
   document.getElementById("coloredNoise")!.addEventListener("click", function () {
-      // @ts-ignore
-      colorNoise(canvasContext, screenWidth, screenHeight, document.getElementById("resolution")!.value, document.getElementById("opacity")!.value);
-    });
+    // @ts-ignore
+    colorNoise(canvasContext, screenWidth, screenHeight, document.getElementById("resolution")!.value, document.getElementById("opacity")!.value);
+  });
   document.getElementById("bwNoise")!.addEventListener("click", function () {
     // @ts-ignore
     bwNoise(canvasContext, screenWidth, screenHeight, document.getElementById("resolution")!.value, document.getElementById("opacity")!.value);
   });
   document.getElementById("blendedBWNoise")!.addEventListener("click", function () {
-      // @ts-ignore
-      blendedBWNoise(canvasContext, screenWidth, screenHeight, document.getElementById("resolution")!.value, document.getElementById("opacity")!.value);
-    });
+    // @ts-ignore
+    blendedBWNoise(canvasContext, screenWidth, screenHeight, document.getElementById("resolution")!.value, document.getElementById("opacity")!.value);
+  });
   document.getElementById("bwGradient")!.addEventListener("click", function () {
     // @ts-ignore
     bwGradient(canvasContext, screenWidth, screenHeight, document.getElementById("resolution")!.value, document.getElementById("opacity")!.value);
@@ -59,19 +59,19 @@ window.onload = function () {
     brushMode = !brushMode;
   });
   document
-    .getElementById("checkeredPattern")!
-    .addEventListener("click", function () {
-      // @ts-ignore
-      checkeredPattern(canvasContext, screenWidth, screenHeight, document.getElementById("resolution")!.value, document.getElementById("opacity")!.value, document.getElementById("colorRValue")!.value, document.getElementById("colorGValue")!.value, document.getElementById("colorBValue")!.value);
-    });
+      .getElementById("checkeredPattern")!
+      .addEventListener("click", function () {
+        // @ts-ignore
+        checkeredPattern(canvasContext, screenWidth, screenHeight, document.getElementById("resolution")!.value, document.getElementById("opacity")!.value, document.getElementById("colorRValue")!.value, document.getElementById("colorGValue")!.value, document.getElementById("colorBValue")!.value);
+      });
 };
 //Brush
 document
-  .getElementById("draw_zone")!
-  .addEventListener("mousemove", function (event) {
-    // @ts-ignore
-    brushMoveHandler(event, canvasContext, document.getElementById("resolution")!.value, document.getElementById("opacity")!.value, brushMode, document.getElementById("colorRValue")!.value, document.getElementById("colorGValue")!.value, document.getElementById("colorBValue")!.value);
-  });
+    .getElementById("draw_zone")!
+    .addEventListener("mousemove", function (event) {
+      // @ts-ignore
+      brushMoveHandler(event, canvasContext, document.getElementById("resolution")!.value, document.getElementById("opacity")!.value, brushMode, document.getElementById("colorRValue")!.value, document.getElementById("colorGValue")!.value, document.getElementById("colorBValue")!.value);
+    });
 //Resize reload
 window.addEventListener("resize", function () {
   window.location.reload();

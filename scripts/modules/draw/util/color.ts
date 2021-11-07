@@ -3,14 +3,38 @@ export class colorRGB {
   private g: number;
   private b: number;
   constructor(r: number = 0, g: number = 0, b: number = 0) {
-    this.r = r;
-    this.g = g;
-    this.b = b;
+    if (r <= 255) {
+      this.r = r;
+    } else {
+      this.r = 255;
+    }
+    if (g <= 255) {
+      this.g = g;
+    } else {
+      this.g = 255;
+    }
+    if (b <= 255) {
+      this.b = b;
+    } else {
+      this.b = 255;
+    }
   }
   setColor(r: number, g: number, b: number) {
-    this.r = r;
-    this.g = g;
-    this.b = b;
+    if (r <= 255) {
+      this.r = r;
+    } else {
+      this.r = 255;
+    }
+    if (g <= 255) {
+      this.g = g;
+    } else {
+      this.g = 255;
+    }
+    if (b <= 255) {
+      this.b = b;
+    } else {
+      this.b = 255;
+    }
   }
   convertRGBA(inputColor: colorRGBA) {
     this.r = inputColor.getColorValue[0];
@@ -31,16 +55,48 @@ export class colorRGBA {
   private b: number;
   private a: number;
   constructor(r: number = 0, g: number = 0, b: number = 0, a: number = 255) {
-    this.r = r;
-    this.g = g;
-    this.b = b;
-    this.a = a;
+    if (r <= 255) {
+      this.r = r;
+    } else {
+      this.r = 255;
+    }
+    if (g <= 255) {
+      this.g = g;
+    } else {
+      this.g = 255;
+    }
+    if (b <= 255) {
+      this.b = b;
+    } else {
+      this.b = 255;
+    }
+    if (a <= 255) {
+      this.a = a;
+    } else {
+      this.a = 255;
+    }
   }
   setColor(r: number, g: number, b: number, a: number) {
-    this.r = r;
-    this.g = g;
-    this.b = b;
-    this.a = a;
+    if (r <= 255) {
+      this.r = r;
+    } else {
+      this.r = 255;
+    }
+    if (g <= 255) {
+      this.g = g;
+    } else {
+      this.g = 255;
+    }
+    if (b <= 255) {
+      this.b = b;
+    } else {
+      this.b = 255;
+    }
+    if (a <= 255) {
+      this.a = a;
+    } else {
+      this.a = 255;
+    }
   }
   convertRGB(inputColor: colorRGB, transparency: number = 255) {
     this.r = inputColor.getColorValue[0];
