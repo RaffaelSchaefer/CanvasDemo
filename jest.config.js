@@ -3,7 +3,7 @@ module.exports = {
     preset: 'ts-jest',
     testEnvironment: 'node',
     transform: {
-        "^.+\\.js?$": "babel-jest", // Adding this line solved the issue
+        "^.+\\.js?$": "babel-jest",
         "^.+\\.ts?$": "ts-jest"
     },
 };
