@@ -27,7 +27,7 @@ export class colorRGBA {
     this.a = a;
   }
   colorGenerate(r: number, g: number, b: number, a: number) {
-    return "rgb(" + r + ", " + g + ", " + b + ", " + a + ")";
+    return "rgba(" + r + ", " + g + ", " + b + ", " + a + ")";
   }
   get color() {
     return this.colorGenerate(this.r, this.g, this.b, this.a);
