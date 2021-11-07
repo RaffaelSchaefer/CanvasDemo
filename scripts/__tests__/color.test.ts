@@ -7,5 +7,5 @@ test("A new colorRGB cant be empty instead it should be black", () => {
 
 test("A new colorRGBA cant be empty instead it should be black without transparency", () => {
     let c: colorRGBA = new colorRGBA();
-    expect(c.color).toBe("rgba(0, 0, 0, 0)")
+    expect(c.color).toBe("rgba(0, 0, 0, 255)")
 });
