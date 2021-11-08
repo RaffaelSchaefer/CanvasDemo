@@ -1,4 +1,4 @@
-import { colorRGBA } from "../util/color.js";
+import { color } from "../util/color.js";
 
 export function fillCanvas(
   ctx: any,
@@ -7,7 +7,7 @@ export function fillCanvas(
   b: number,
   a: number
 ) {
-  let fillColor: colorRGBA = new colorRGBA(r, g, b, a);
+  let fillColor: color = new color(r, g, b, a);
   let screenHeight = window.innerHeight;
   let screenWidth = window.innerWidth;
   ctx.fillStyle = fillColor;

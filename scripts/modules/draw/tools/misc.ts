@@ -1,4 +1,4 @@
-import { colorRGBA } from "../util/color.js";
+import { color } from "../util/color.js";
 
 export function rgbParticle(
   ctx: any,
@@ -13,13 +13,13 @@ export function rgbParticle(
       let randomHeight = Math.floor(Math.random() * res);
       let randomPosX = Math.floor(Math.random() * width);
       let randomPosY = Math.floor(Math.random() * height);
-      let randomColor: colorRGBA = new colorRGBA(
+      let randomColor: color = new color(
         Math.floor(Math.random() * 255),
         Math.floor(Math.random() * 255),
         Math.floor(Math.random() * 255),
         alpha
       );
-      ctx.fillStyle = randomColor.color;
+      ctx.fillStyle = randomColor.RGBA;
       ctx.fillRect(randomPosX, randomPosY, randomWidth, randomHeight);
     }
   }
