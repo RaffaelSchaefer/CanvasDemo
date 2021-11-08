@@ -3,51 +3,85 @@ export class color {
   private g: number;
   private b: number;
   private a: number;
+  //SETTERS
   constructor(r: number = 0, g: number = 0, b: number = 0, a: number = 255) {
-    if (r <= 255) {
-      this.r = r;
-    } else {
+    if (r >= 255) {
       this.r = 255;
-    }
-    if (g <= 255) {
-      this.g = g;
     } else {
+      if (r < 0) {
+        this.r = 0;
+      } else {
+        this.r = r;
+      }
+    }
+    if (g >= 255) {
       this.g = 255;
-    }
-    if (b <= 255) {
-      this.b = b;
     } else {
+      if (r < 0) {
+        this.g = 0;
+      } else {
+        this.g = g;
+      }
+    }
+    if (b >= 255) {
       this.b = 255;
-    }
-    if (a <= 255) {
-      this.a = a;
     } else {
+      if (b < 0) {
+        this.b = 0;
+      } else {
+        this.b = b;
+      }
+    }
+    if (a >= 255) {
       this.a = 255;
+    } else {
+      if (a < 0) {
+        this.a = 0;
+      } else {
+        this.a = a;
+      }
     }
   }
   setColor(r: number, g: number, b: number, a: number) {
-    if (r <= 255) {
-      this.r = r;
-    } else {
+    if (r >= 255) {
       this.r = 255;
-    }
-    if (g <= 255) {
-      this.g = g;
     } else {
+      if (r < 0) {
+        this.r = 0;
+      } else {
+        this.r = r;
+      }
+    }
+    if (g >= 255) {
       this.g = 255;
-    }
-    if (b <= 255) {
-      this.b = b;
     } else {
+      if (r < 0) {
+        this.g = 0;
+      } else {
+        this.g = g;
+      }
+    }
+    if (b >= 255) {
       this.b = 255;
-    }
-    if (a <= 255) {
-      this.a = a;
     } else {
+      if (b < 0) {
+        this.b = 0;
+      } else {
+        this.b = b;
+      }
+    }
+    if (a >= 255) {
       this.a = 255;
+    } else {
+      if (a < 0) {
+        this.a = 0;
+      } else {
+        this.a = a;
+      }
     }
   }
-  get getColorValue() {
+  //GETTERS
+  get color() {
     return [this.r, this.g, this.b, this.a];
   }
   get RGB () {
@@ -55,5 +89,12 @@ export class color {
   }
   get RGBA() {
     return "rgba(" + this.r + ", " + this.g + ", " + this.b + ", " + this.a + ")";
+  }
+  //FILTERS
+  addition(otherColor: color) {
+
+  }
+  subtract(otherColor: color) {
+
   }
 }

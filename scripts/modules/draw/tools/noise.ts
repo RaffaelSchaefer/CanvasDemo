@@ -94,9 +94,9 @@ export function blendedRGBNoise(
         ctx.fillStyle = randomColor.RGBA;
       } else {
         let blendedColor: color = new color(
-          (randomColor.getColorValue[0] + lastRandomColor.getColorValue[0]) / 2,
-          (randomColor.getColorValue[1] + lastRandomColor.getColorValue[1]) / 2,
-          (randomColor.getColorValue[2] + lastRandomColor.getColorValue[2]) / 2,
+          (randomColor.color[0] + lastRandomColor.color[0]) / 2,
+          (randomColor.color[1] + lastRandomColor.color[1]) / 2,
+          (randomColor.color[2] + lastRandomColor.color[2]) / 2,
           alpha
         );
         ctx.fillStyle = blendedColor.RGBA;
