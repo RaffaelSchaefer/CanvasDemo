@@ -1,3 +1,4 @@
+//TODO blur function
 export class color {
   private r: number;
   private g: number;
@@ -42,7 +43,7 @@ export class color {
       }
     }
   }
-  setColor(r: number, g: number, b: number, a: number) {
+  setColor(r: number = this.r, g: number = this.g, b: number = this.b, a: number = this.a) {
     if (r >= 255) {
       this.r = 255;
     } else {
@@ -92,9 +93,9 @@ export class color {
   }
   //FILTERS
   addition(otherColor: color) {
-
+    this.setColor(this.r+otherColor.color[0], this.g+otherColor.color[1], this.b+otherColor.color[2]);
   }
-  subtract(otherColor: color) {
-
+  subtraction(otherColor: color) {
+    this.setColor(this.r-otherColor.color[0], this.g-otherColor.color[1], this.b-otherColor.color[2]);
   }
 }
