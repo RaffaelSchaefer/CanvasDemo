@@ -4,7 +4,6 @@ export class color {
   private g: number;
   private b: number;
   private a: number;
-
   //SETTERS
   constructor(r: number = 0, g: number = 0, b: number = 0, a: number = 255) {
     if (r >= 255) {
@@ -44,7 +43,6 @@ export class color {
       }
     }
   }
-
   setColor(r: number = this.r, g: number = this.g, b: number = this.b, a: number = this.a) {
     if (r >= 255) {
       this.r = 255;
@@ -83,20 +81,16 @@ export class color {
       }
     }
   }
-
   //GETTERS
   get color() {
     return [this.r, this.g, this.b, this.a];
   }
-
   get RGB () {
     return "rgb(" + this.r + ", " + this.g + ", " + this.b + ")";
   }
-
   get RGBA() {
     return "rgba(" + this.r + ", " + this.g + ", " + this.b + ", " + this.a + ")";
   }
-
   //FILTERS
   addition(otherColor: color) {
     this.setColor(
@@ -105,7 +99,6 @@ export class color {
         this.b+otherColor.color[2]
     );
   }
-
   subtraction(otherColor: color) {
     this.setColor(
         this.r-otherColor.color[0],
@@ -113,7 +106,6 @@ export class color {
         this.b-otherColor.color[2]
     );
   }
-
   multiply(otherColor: color) {
     this.setColor(
         color.factorise(this.r*otherColor.color[0]),
@@ -121,7 +113,6 @@ export class color {
         color.factorise(this.b*otherColor.color[2])
     );
   }
-
   blur(otherColor: color,factor: number = color.factorise(otherColor.color[3])) {
     this.setColor(
         (this.r+(factor*otherColor.color[0]))/2,
