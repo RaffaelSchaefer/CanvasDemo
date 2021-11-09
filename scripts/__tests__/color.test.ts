@@ -1,8 +1,16 @@
+//TODO working on CMYK
 import {color} from "../modules/draw/util/color";
 
 test("A new color without values is always black and completely visible", () => {
     let c: color = new color();
     expect(c.color).toEqual([0,0,0,255]);
+});
+
+test("A color value is always an integer value", () => {
+    let c: color = new color(2.4,2.4,2.4,2.4);
+    expect(c.color).toEqual([2,2,2,2]);
+    c.setColor(5.4,5.4,5.4,5.4);
+    expect(c.color).toEqual([5,5,5,5]);
 });
 
 test("The setValue defaults on its own values", () => {
@@ -47,4 +55,18 @@ test("The minimum result of an subtraction is 0", () => {
     let c2: color = new color(255,255,255,255);
     c1.subtraction(c2);
     expect(c1.color).toEqual([0,0,0,255]);
+});
+
+test("Colors can be multiplied", () => {
+    let c1: color = new color(255,240,80,255);
+    let c2: color = new color(70,23,250,255);
+    c1.multiply(c2);
+    expect(c1.color).toEqual([70,21,78,255]);
+});
+
+test("A Color can be blurred", () => {
+    let c1: color = new color(200,76,99,255);
+    let c2: color = new color(255,255,255,60);
+    c1.blur(c2);
+    expect(c1.color).toEqual([130,68,79,255]);
 });
