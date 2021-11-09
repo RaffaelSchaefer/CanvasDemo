@@ -7,12 +7,13 @@
     "sass_compile": "npx --no-install sass --no-source-map ./sass/:./css/",
     "typescript_compile": "npx --no-install tsc",
     "minify": "npx --no-install uglifyjs-folder --log-level warning -x .js ./scripts/ -eo ./scripts/ && terser main.js --compress --mangle --output main.js",
-    "compile": "npm run typescript_compile && npm run sass_compile && npm run minify",
+    "compile": "npm run typescript_compile && npm run sass_compile",
+    "release_compile": "npm run typescript_compile && npm run sass_compile && npm run minify",
     "build_app_macOS": "electron-packager ./ NoiseArt --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns",
     "build_macOS": "npm run compile && npm run build_app_macOS",
     "start": "npm run compile && electron --trace-warnings .",
     "reload": "rs",
-    "test": "npx jest"
+    "test": "npm run typescript_compile && npx jest"
   },
   "repository": {
     "type": "git",
