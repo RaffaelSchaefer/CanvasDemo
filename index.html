@@ -1,110 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
     <title>Noise Art</title>
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="assets/icons/png/icon.png" />
-  </head>
-  <body>
-    <div id="toolBox" class="menu">
-      <div id="toolBoxHeader" class="header">
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <link rel="icon" href="assets/icons/png/icon.png"/>
+</head>
+<body>
+<div id="toolBox" class="menu">
+    <div id="toolBoxHeader" class="header">
         <div id="toolBoxHeaderClose" class="close"></div>
         <p class="title">Tools</p>
-      </div>
-      <div id="toolBoxContent" class="content">
+    </div>
+    <div id="toolBoxContent" class="content">
         <button class="entry" id="coloredNoise">Colored Noise</button>
         <button class="entry" id="bwNoise">BW Noise</button>
         <button class="entry" id="blendedBWNoise">Blended Noise</button>
-        <br />
+        <br/>
         <button class="entry" id="bwGradient">BW Gradient</button>
         <button class="entry" id="rbGradient">RB Gradient</button>
         <button class="entry" id="saw">Saw</button>
-        <br />
+        <br/>
         <button class="entry" id="fill">Fill</button>
         <button class="entry" id="dots">Dots</button>
         <button class="entry" id="checkeredPattern">Checkered Pattern</button>
-        <br />
+        <br/>
         <button class="entry" id="useBrush">Brush</button>
-        <br />
+        <br/>
         <button class="entry" id="clear">Clear</button>
         <button class="entry" id="export">Export</button>
-      </div>
     </div>
-    <div id="optionsMenu" class="menu">
-      <div id="optionsMenuHeader" class="header">
+</div>
+<div id="optionsMenu" class="menu">
+    <div id="optionsMenuHeader" class="header">
         <div id="optionsMenuClose" class="close"></div>
         <p class="title">Options</p>
-      </div>
-      <div id="optionsMenuContent" class="content">
+    </div>
+    <div id="optionsMenuContent" class="content">
         <label for="resolution" class="entry">Size</label
         ><input
-          type="range"
-          min="1"
-          max="100"
-          class="slider"
-          id="resolution"
-          value="4"
-        />
-        <br />
+            type="range"
+            min="1"
+            max="100"
+            class="slider"
+            id="resolution"
+            value="4"
+    />
+        <br/>
         <label for="opacity" class="entry">Opacity</label
         ><input
-          type="range"
-          min="0"
-          max="1"
-          step="0.01"
-          class="slider"
-          id="opacity"
-          value="1"
-        />
-      </div>
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            class="slider"
+            id="opacity"
+            value="1"
+    />
     </div>
-    <div id="colorMenu" class="menu">
-      <div id="colorMenuHeader" class="header">
+</div>
+<div id="colorMenu" class="menu">
+    <div id="colorMenuHeader" class="header">
         <div id="colorMenuClose" class="close"></div>
         <p class="title">Color</p>
-      </div>
-      <div id="colorMenuContent" class="content">
+    </div>
+    <div id="colorMenuContent" class="content">
         <div id="colorMenuContentSliders">
-          <label for="colorRValue" class="entry">R Value</label
-          ><input
-            type="range"
-            min="0"
-            max="255"
-            class="slider"
-            id="colorRValue"
-            value="0"
-          />
-          <br />
-          <label for="colorGValue" class="entry">G Value</label
-          ><input
-            type="range"
-            min="0"
-            max="255"
-            class="slider"
-            id="colorGValue"
-            value="0"
-          />
-          <br />
-          <label for="colorBValue" class="entry">B Value</label
-          ><input
-            type="range"
-            min="0"
-            max="255"
-            class="slider"
-            id="colorBValue"
-            value="0"
-          />
+            <label for="colorRValue" class="entry">R Value</label
+            ><input
+                type="range"
+                min="0"
+                max="255"
+                class="slider"
+                id="colorRValue"
+                value="0"
+        />
+            <br/>
+            <label for="colorGValue" class="entry">G Value</label
+            ><input
+                type="range"
+                min="0"
+                max="255"
+                class="slider"
+                id="colorGValue"
+                value="0"
+        />
+            <br/>
+            <label for="colorBValue" class="entry">B Value</label
+            ><input
+                type="range"
+                min="0"
+                max="255"
+                class="slider"
+                id="colorBValue"
+                value="0"
+        />
         </div>
         <canvas id="colorPreview" width="50px" height="200px"></canvas>
-      </div>
     </div>
-    <canvas id="draw_zone"></canvas>
-    <div class="footer" id="footer">
-      <p class="text">Noise Art by Raffael E. Schäfer</p>
-    </div>
-    <script defer src="scripts/render.js"></script>
-    <script defer type="module" src="scripts/modules/ui/ui.js"></script>
-    <script defer type="module" src="scripts/modules/draw/draw.js"></script>
-  </body>
+</div>
+<canvas id="draw_zone"></canvas>
+<div class="footer" id="footer">
+    <p class="text">Noise Art by Raffael E. Schäfer</p>
+</div>
+<script defer src="scripts/render.js"></script>
+<script defer type="module" src="scripts/modules/ui/ui.js"></script>
+<script defer type="module" src="scripts/modules/draw/draw.js"></script>
+</body>
 </html>

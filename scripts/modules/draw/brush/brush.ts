@@ -9,17 +9,17 @@ export function drawLineOnCanvas(
     g: number,
     b: number
 ) {
-  let posX = event.offsetX,
-      posY = event.offsetY;
+    let posX = event.offsetX,
+        posY = event.offsetY;
 
-  ctx.lineWidth = size;
-  ctx.strokeStyle = "rgba(" + r + "," + g + "," + b + "," + opacity + ")";
+    ctx.lineWidth = size;
+    ctx.strokeStyle = "rgba(" + r + "," + g + "," + b + "," + opacity + ")";
 
-  ctx.beginPath();
-  ctx.moveTo(posX - event.movementX, posY - event.movementY);
-  ctx.lineTo(posX, posY);
+    ctx.beginPath();
+    ctx.moveTo(posX - event.movementX, posY - event.movementY);
+    ctx.lineTo(posX, posY);
 
-  ctx.stroke();
+    ctx.stroke();
 }
 
 export function brushMoveHandler(
@@ -32,10 +32,11 @@ export function brushMoveHandler(
     g: number,
     b: number
 ) {
-  if (event.buttons === 1 && brushMode) {
-    drawLineOnCanvas(event, ctx, size, opacity, r, g, b);
-  } else {
-    ctx.lineWidth = 1;
-  }
+    if (event.buttons === 1 && brushMode) {
+        drawLineOnCanvas(event, ctx, size, opacity, r, g, b);
+    } else {
+        ctx.lineWidth = 1;
+    }
 }
+
 //Original code by Checker8763
