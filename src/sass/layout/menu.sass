@@ -1,0 +1,99 @@
+@use "../abstracts" as abs
+
+.menu
+  position: absolute
+  background-color: transparent
+  z-index: 2
+
+  button, label
+    background-color: transparent
+    color: abs.$defaultFontColor
+    border: none
+    padding: 10px 10px
+    text-align: center
+    text-decoration: none
+    display: inline-block
+    font-size: abs.$defaultFontSize
+
+  input[type="range"]
+    margin: 10px 10px
+    -webkit-appearance: none
+    width: 90%
+    height: 15px
+    background: #d3d3d3
+    outline: none
+    -webkit-transition: .2s
+    transition: opacity .2s
+
+    &::-webkit-slider-thumb
+      -webkit-appearance: none
+      appearance: none
+      width: 15px
+      height: 15px
+      background: abs.$defaultHeaderColor
+      cursor: pointer
+
+    &::-moz-range-thumb
+      width: 25px
+      height: 25px
+      background: abs.$defaultHeaderColor
+      cursor: pointer
+
+  .header
+    display: flex
+    flex-direction: row
+    margin-bottom: 10px
+    cursor: move
+    touch-action: none
+    color: abs.$defaultFontColor
+    text-align: center
+    font-size: abs.$defaultFontSize
+    @include abs.defaultWindowDeco(abs.$defaultHeaderColor)
+
+    p
+      margin: 5px
+
+    div
+      cursor: pointer
+      margin: 5px
+      width: 10px
+      height: 10px
+      text-align: center
+      font-size: abs.$defaultFontSize
+      border-radius: 50px
+
+  .content
+    @include abs.defaultWindowDeco(abs.$defaultContentColor)
+
+    canvas
+      width: 50px
+      height: 100%
+      margin: 10px
+      border: 5px solid abs.$defaultContentColor
+      border-radius: 15px
+
+#toolBox
+  top: abs.$defaultWindowMargin
+  left: abs.$defaultWindowMargin
+
+#optionsMenu
+  top: abs.$defaultWindowMargin
+  left: abs.$defaultWindowMargin+300px
+
+#colorMenu
+  top: abs.$defaultWindowMargin+230px
+  left: abs.$defaultWindowMargin
+
+#colorMenuContent
+  display: flex
+  flex-direction: row
+  justify-content: center
+
+#toolBoxHeaderClose
+  @include abs.closeIconColor(lightcoral)
+
+#optionsMenuClose
+  @include abs.closeIconColor(darkseagreen)
+
+#colorMenuClose
+  @include abs.closeIconColor(lightskyblue)

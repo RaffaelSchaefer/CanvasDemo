@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Noise Art</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/icons/icon.png" rel="icon"/>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="js/ui/ui.js" type="module"></script>
+    <script defer src="js/draw/draw.js" type="module"></script>
+</head>
+<body x-cloak x-data="{color: {r: 255, g: 255, b: 255}}">
+<div class="menu" id="toolBox" x-data="{active: true}">
+    <div class="header" id="toolBoxHeader">
+        <div id="toolBoxHeaderClose" x-on:click="active = !active"></div>
+        <p>Tools</p>
+    </div>
+    <div class="content" id="toolBoxContent" x-show="active">
+        <button id="coloredNoise">Colored Noise</button>
+        <button id="bwNoise">BW Noise</button>
+        <button id="blendedBWNoise">Blended Noise</button>
+        <br/>
+        <button id="bwGradient">BW Gradient</button>
+        <button id="rbGradient">RB Gradient</button>
+        <button id="saw">Saw</button>
+        <br/>
+        <button id="fill">Fill</button>
+        <button id="dots">Dots</button>
+        <button id="checkeredPattern">Checkered Pattern</button>
+        <br/>
+        <button id="useBrush">Brush</button>
+        <br/>
+        <button id="clear">Clear</button>
+        <button id="export">Export</button>
+    </div>
+</div>
+<div class="menu" id="optionsMenu" x-data="{active: true}">
+    <div class="header" id="optionsMenuHeader">
+        <div id="optionsMenuClose" x-on:click="active = !active"></div>
+        <p>Options</p>
+    </div>
+    <div class="content" id="optionsMenuContent" x-show="active">
+        <label for="resolution">Size</label
+        ><input
+            id="resolution"
+            max="100"
+            min="1"
+            type="range"
+            value="4"
+    />
+        <br/>
+        <label for="opacity">Opacity</label
+        ><input
+            id="opacity"
+            max="1"
+            min="0"
+            step="0.01"
+            type="range"
+            value="1"
+    />
+    </div>
+</div>
+<div class="menu" id="colorMenu" x-data="{active: true}">
+    <div class="header" id="colorMenuHeader">
+        <div id="colorMenuClose" x-on:click="active = !active"></div>
+        <p>Color</p>
+    </div>
+    <div class="content" id="colorMenuContent" x-show="active">
+        <div id="colorMenuContentSliders">
+            <label for="colorRValue">R Value</label
+            ><input
+                id="colorRValue"
+                max="255"
+                min="0"
+                type="range"
+                value="255"
+        />
+            <br/>
+            <label for="colorGValue">G Value</label
+            ><input
+                id="colorGValue"
+                max="255"
+                min="0"
+                type="range"
+                value="255"
+        />
+            <br/>
+            <label for="colorBValue">B Value</label
+            ><input
+                id="colorBValue"
+                max="255"
+                min="0"
+                type="range"
+                value="255"
+        />
+        </div>
+        <canvas height="200px" id="colorPreview" width="50px"></canvas>
+    </div>
+</div>
+<canvas id="draw"></canvas>
+<footer>
+    <p class="text">Noise Art by Raffael E. Schäfer</p>
+</footer>
+</body>
+</html>

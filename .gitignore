@@ -1,14 +1,8 @@
 # Folder
 .idea
+.vscode
 node_modules
-noiseArt-darwin-x64
-noiseArt-win32-x64
-noiseArt-linux-x64
-# Filetype
-*.js
-*.css
+legacy
 # Files
 .DS_Store
 #Exceptions
-!jest.config.js
-!babel.config.js
